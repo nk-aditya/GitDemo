@@ -16,6 +16,11 @@ Mandatory Commands
 Git Pull Commands
  >>git pull origin main
 
- Git Push commands
- git status
- git add .
+Git Push commands
+ >>git status
+ >>git add .
+ >>git commit -m "commit message"
+ >>git push
+
+Create New Branch / Switch Branch 
+ >>git checkout -b "BranchName"
