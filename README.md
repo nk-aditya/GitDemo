@@ -1,2 +1,2 @@
 # GitDemo
-Aditya NAyak
+Aditya Nayak
