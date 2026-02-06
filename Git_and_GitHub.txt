@@ -22,5 +22,11 @@ Git Push commands
  >>git commit -m "commit message"
  >>git push
 
-Create New Branch / Switch Branch 
+Create New Branch 
  >>git checkout -b "BranchName"
+
+Switch Branch
+ >>git checkout "Branchnamewhichtoswitch"
+
+Git Clone Command
+ >>git clone repourl
