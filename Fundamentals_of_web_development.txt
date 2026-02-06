@@ -1,0 +1,65 @@
+MERN Stack 
+ >>M: MongoDB 
+ >>E: ExpressJS
+ >>R: ReactJS
+ >>N: NodeJS
+
+Three Pillars
+ >> HTML: Hyper Text Markup Language
+ >> CSS: Cascading Style Sheets
+ >> JS : JavaScript
+
+Other Stacks
+ >> MEAN, Java FullStack Development, Python Development
+
+Web Development
+ >>Building/Development Team
+ >>Testing Team
+ >>Hosting/DevOps Team
+ >>Maintainance Team
+
+SDLC(Software Development Life Cycle)
+ >>WaterFall Model
+ >>Spiral Model
+ >>Agile Model
+ >>RAD Model
+ >>Iterative Model
+ >>Protoytping Model
+ >>Incremental Model
+
+URL(Uniform Resource Locater)
+ >>https://www.google.com
+ >>https://education.rohanacademy.edu/Fullstack
+   >>https : Protocal
+   >>rohanacademy : server/domain Name
+   >>education : TDL (Top Level Domain)
+   >>Fullstack : Path/Location in site
+
+Protocol : Set of rules/instruction must be followed
+ >>http:hyper text transfer protocol
+ >>https:hyper text transfer protocol secure
+ >>tcp:transmission control protocol
+ >>udp:user datagram protocol
+ >>smtp:simple mail transfer protocol
+ >>ip:internet Protocol (ipv4, ipv6)
+
+Server/Domain Name
+ >>Unique name / Identifier of site
+ >> Google, amazon, 
+
+Sub Domain Name 
+ >>gmeet, gmap, gdrive, gphotos, gpay, gcalender, gmail
+
+TLD(Top Level Domain)
+ >>com, in, org, co, edu, etc
+
+Offline Editors
+ >>Notepad/Notepad ++
+ >>Sublime
+ >>Open Brackets
+ >>VS Code
+
+Online Editors
+ >>CodeSpace
+ >>CodeSandbox
+  

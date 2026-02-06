@@ -1,0 +1,21 @@
+Git : Version Control
+ >>it is distribitued on cloud
+ >>Collaboration
+ >>Tracking
+ >>Recovery
+
+ For 1st time we need to configure github in our system : means connect remote github to local git
+  >>git config --global user.name"nk-aditya"
+  >>git config --global user.email"adityanayak2803@gmail.com"
+  >>git config --global color.ui.auto (optional)
+
+Mandatory Commands
+ >>git init
+ >>git remote add origin https://github.com/nk-aditya/GitDemo.git
+
+Git Pull Commands
+ >>git pull origin main
+
+ Git Push commands
+ git status
+ git add .
