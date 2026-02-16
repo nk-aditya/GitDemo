@@ -33,15 +33,18 @@ URL(Uniform Resource Locater)
    >>https : Protocal
    >>rohanacademy : server/domain Name
    >>education : TDL (Top Level Domain)
-   >>Fullstack : Path/Location in site
+   >>Fullstack : Path/Location/page in site
 
 Protocol : Set of rules/instruction must be followed
  >>http:hyper text transfer protocol
  >>https:hyper text transfer protocol secure
+ >>ftp:file transfer protocol
  >>tcp:transmission control protocol
  >>udp:user datagram protocol
  >>smtp:simple mail transfer protocol
  >>ip:internet Protocol (ipv4, ipv6)
+
+ >>http ----> SSL certification (secure socket layer)  ----> https
 
 Server/Domain Name
  >>Unique name / Identifier of site

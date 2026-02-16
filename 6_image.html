@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image in HTML</title>
+</head>
+<body>
+
+
+    ## <img src="" alt=""> image tag with src and alt attributes. src is the source(from where we get our image) of the image and alt is the alternative text that will be displayed if the image cannot be displayed.
+     
+    ## Two ways to specify the src(path) of the image
+
+    1. Absolute path(online image): It is the complete URL of the image. It starts with http:// or https://. 
+    For example, <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo">.
+
+    2. Relative path(offline image/image in our system): It is the path of the image relative to the location of the HTML file.
+       ##Two types of relative path:
+       A. Relative path from the current location: same path as the HTML file.
+       For example, <img src="image_name.jpg" alt="Image"> 
+
+       B. Relative path from the diffrent location: diffrent path from the HTML file. 
+       For example, <img src="images/image_name.jpg" alt="Image">
+    
+    ## Height and width attributes of the image tag
+    We can specify the height and width of the image using the height and width attributes of the image tag. The value of these attributes can be in pixels(px) or percentage(%).
+    For example, <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo" height="50%" width="50%">.
+
+    *Note: it is suggested that only use height or width attribute at a time to maintain the aspect ratio of the image. If we use both height and width attributes, then the image may get distorted if the aspect ratio is not maintained.*
+
+    ## Alignment of the image
+    We can align the image using the align attribute of the image tag. The value of this attribute can be left, right, or center.
+    For example, for left alignment,we can use
+    <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png" alt="Google Logo" align="left">.
+
+</body>
+    
+    
+
+</html>

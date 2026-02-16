@@ -4,10 +4,10 @@ Git : Version Control
  >>Tracking
  >>Recovery
 
- For 1st time we need to configure github in our system : means connect remote github to local git
-  >>git config --global user.name"nk-aditya"
-  >>git config --global user.email"adityanayak2803@gmail.com"
-  >>git config --global color.ui.auto (optional)
+For 1st time we need to configure github in our system : means connect remote github to local git
+ >>git config --global user.name"nk-aditya"
+ >>git config --global user.email"adityanayak2803@gmail.com"
+ >>git config --global color.ui.auto (optional)
 
 Mandatory Commands
  >>git init
