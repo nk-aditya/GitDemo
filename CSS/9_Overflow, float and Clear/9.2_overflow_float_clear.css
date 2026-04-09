@@ -1,0 +1,253 @@
+/* ============================================
+   CSS for Overflow, Float and Clear Examples
+   ============================================
+
+   This stylesheet demonstrates:
+   1. Overflow property (visible, hidden, scroll, auto)
+   2. Float property (left, right, none)
+   3. Clear property (left, right, both, none)
+   4. Clearfix technique
+
+   ============================================ */
+
+/* ============================================
+   BASE STYLES
+   Basic styling for better presentation
+   ============================================ */
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #555;
+    margin-top: 30px;
+}
+
+section {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #d63384;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* ============================================
+   OVERFLOW STYLES
+   Demonstrates different overflow values
+
+   The overflow property controls what happens
+   when content overflows its container's bounds.
+   ============================================ */
+
+/* Base style for all overflow boxes */
+.overflow-box {
+    width: 250px;           /* Fixed width to demonstrate overflow */
+    height: 100px;          /* Fixed height to create overflow */
+    background-color: #e7f3ff;
+    border: 2px solid #007bff;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+/* overflow: visible - Default value
+   Content is not clipped and renders outside the box.
+   Useful for debugging layout issues. */
+.overflow-visible {
+    overflow: visible;
+}
+
+/* overflow: hidden
+   Content that overflows is hidden.
+   Useful for creating fixed-size containers
+   where overflow content should not be shown. */
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* overflow: scroll
+   Always shows scrollbars (both horizontal and vertical)
+   even if content doesn't overflow.
+   Useful when you always want scrollbars visible. */
+.overflow-scroll {
+    overflow: scroll;
+}
+
+/* overflow: auto
+   Browser decides whether to show scrollbars.
+   Only shows scrollbars when content actually overflows.
+   Most commonly used value in real-world applications. */
+.overflow-auto {
+    overflow: auto;
+}
+
+/* ============================================
+   FLOAT STYLES
+   Demonstrates float property values
+
+   Float takes an element out of normal document
+   flow and positions it to the left or right
+   of its container, allowing content to wrap around.
+   ============================================ */
+
+/* Container for float examples */
+.float-container {
+    border: 2px dashed #28a745;
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow: auto; /* Prevents parent collapse */
+}
+
+/* Base style for floated boxes */
+.float-box {
+    width: 120px;
+    height: 60px;
+    background-color: #28a745;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+/* float: left
+   Element floats to the left side of container.
+   Subsequent content wraps around on the right. */
+.float-left {
+    float: left;
+}
+
+/* float: right
+   Element floats to the right side of container.
+   Subsequent content wraps around on the left. */
+.float-right {
+    float: right;
+}
+
+/* Multiple float demonstration */
+.multi-float {
+    /* overflow: auto ensures container wraps all floated elements */
+    overflow: auto;
+}
+
+/* ============================================
+   CLEAR STYLES
+   Demonstrates clear property values
+
+   The clear property specifies which sides of
+   an element should NOT allow floating elements.
+   ============================================ */
+
+/* Container for clear examples */
+.clear-container {
+    border: 2px dashed #dc3545;
+    padding: 15px;
+    margin-bottom: 20px;
+    overflow: auto;
+}
+
+/* Box with clear property applied */
+.clear-box {
+    width: 150px;
+    height: 50px;
+    background-color: #dc3545;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* clear: left
+   Element moves below any element floated to the left.
+   It cannot have floated elements on its left side. */
+.clear-left {
+    clear: left;
+}
+
+/* clear: right
+   Element moves below any element floated to the right.
+   It cannot have floated elements on its right side. */
+.clear-right {
+    clear: right;
+}
+
+/* clear: both
+   Element moves below ALL floated elements,
+   regardless of float direction.
+   Most commonly used value. */
+.clear-both {
+    clear: both;
+}
+
+/* ============================================
+   CLEARFIX TECHNIQUE
+   A common pattern to handle parent container
+   collapse when using floats.
+
+   When all children are floated, the parent
+   container loses its height (collapses).
+   The clearfix solves this problem.
+   ============================================ */
+
+.clearfix-container {
+    border: 2px dashed #6f42c1;
+    padding: 15px;
+    /* Note: Container would collapse without clearfix! */
+}
+
+/* Clearfix: Empty element with clear: both
+   This is placed at the end of floated content
+   to force the parent to expand to contain all
+   floated children. */
+.clearfix {
+    clear: both;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   Adjustments for smaller screens
+   ============================================ */
+
+@media (max-width: 600px) {
+    .overflow-box {
+        width: 100%; /* Full width on mobile */
+    }
+    
+    .float-box {
+        width: 100%; /* Stack floats on mobile */
+        float: none !important;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}

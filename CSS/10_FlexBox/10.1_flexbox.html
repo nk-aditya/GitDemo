@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox in CSS</title>
+    <link rel="stylesheet" href="10.2_flexbox.css">
+    <link rel="shortcut icon" href="/CSS/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <main>
+    <section id="theory">
+        <h1>FlexBox in CSS</h1>
+        <p>Flexbox, short for "Flexible Box Layout," is a powerful layout module in CSS that allows you to design complex and responsive web layouts with ease. It provides a more efficient way to align and distribute space among items in a container, even when their size is unknown or dynamic.</p>
+        <p>With Flexbox, you can control the direction, alignment, and spacing of elements in a container without relying on floats or positioning.</p>
+        <h2>Key Concepts of Flexbox</h2>
+        <ul>
+            <li><strong>Flex Container:</strong> The parent element that holds the flex items. It is defined by setting the display property to "flex" or "inline-flex".</li>
+            <li><strong>Flex Items:</strong> The child elements of a flex container. These items can be arranged in various ways based on the properties applied to the flex container.</li>
+            <li><strong>Main Axis:</strong> The primary axis along which flex items are laid out. It can be horizontal (row) or vertical (column).</li>
+            <li><strong>Cross Axis:</strong> The axis perpendicular to the main axis. It is used for aligning items across the main axis.</li>
+        </ul>
+        <h2>Flexbox Properties</h2>
+        <div id="flexContainerProperties">
+            <h3>Flex Container Properties</h3>
+            <ul>
+                <li><strong>display:</strong> Defines a flex container. Values: "flex" or "inline-flex".</li>
+                <li><strong>flex-direction:</strong> Specifies the direction of the main axis. Values: "row", "row-reverse", "column", "column-reverse".</li>
+                <li><strong>justify-content:</strong> Aligns items along the main axis. Values: "flex-start", "flex-end", "center", "space-between", "space-around".</li>
+                <li><strong>align-items:</strong> Aligns items along the cross axis. Values: "stretch", "flex-start", "flex-end", "center", "baseline".</li>
+                <li><strong>align-content:</strong> Aligns flex lines along the cross axis. Values: "flex-start", "flex-end", "center", "space-between", "space-around", "stretch".</li>
+                <li><strong>flex-wrap:</strong> Controls whether flex items wrap onto multiple lines. Values: "nowrap", "wrap", "wrap-reverse".</li>
+                <li><strong>column-gap:</strong> Sets the gap between columns in a flex container. Values: length or percentage.</li>
+                <li><strong>row-gap:</strong> Sets the gap between rows in a flex container. Values: length or percentage.</li>
+                <li><strong>gap:</strong> Sets the gap between flex items. Values: length or percentage.</li>
+                <li><strong>flex-flow:</strong> A shorthand property for flex-direction and flex-wrap. Values: "row wrap", "column nowrap", etc.</li>
+            </ul>
+        </div>
+        <hr>
+        <div id="flexItemProperties">
+            <h3>Flex Item Properties</h3>
+            <ul>
+                <li><strong>order:</strong> Controls the order of flex items. Default is 0.</li>
+                <li><strong>flex-grow:</strong> Defines the ability of a flex item to grow if necessary. Default is 0.</li>
+                <li><strong>flex-shrink:</strong> Defines the ability of a flex item to shrink if necessary. Default is 1.</li>
+                <li><strong>flex-basis:</strong> Specifies the initial size of a flex item before it is distributed. Default is "auto".</li>
+                <li><strong>align-self:</strong> Allows individual flex items to override the align-items property. Values: "auto", "flex-start", "flex-end", "center", "baseline", "stretch".</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FLEXBOX EXAMPLES SECTION
+         ======================================== -->
+    <section id="example">
+        <h1>Flexbox Examples</h1>
+        <p>Below are practical examples demonstrating all flexbox properties. Each example shows how the CSS property affects the layout.</p>
+
+        <!-- ================================
+             FLEX-DIRECTION EXAMPLES
+             ================================ -->
+        <h2>1. flex-direction Property</h2>
+        <p>The <strong>flex-direction</strong> property specifies the direction of the main axis (how flex items are placed in the flex container).</p>
+
+        <h3>flex-direction: row (default)</h3>
+        <p>Items are placed left to right (in the direction of the inline-axis)</p>
+        <div class="flex-container flex-direction-row">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+        </div>
+
+        <h3>flex-direction: row-reverse</h3>
+        <p>Items are placed right to left</p>
+        <div class="flex-container flex-direction-row-reverse">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+        </div>
+
+        <h3>flex-direction: column</h3>
+        <p>Items are placed top to bottom (in the direction of the block-axis)</p>
+        <div class="flex-container flex-direction-column">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>flex-direction: column-reverse</h3>
+        <p>Items are placed bottom to top</p>
+        <div class="flex-container flex-direction-column-reverse">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <!-- ================================
+             JUSTIFY-CONTENT EXAMPLES
+             ================================ -->
+        <h2>2. justify-content Property</h2>
+        <p>The <strong>justify-content</strong> property aligns items along the main axis (horizontal when flex-direction is row).</p>
+
+        <h3>justify-content: flex-start (default)</h3>
+        <p>Items are packed toward the start line</p>
+        <div class="flex-container justify-content-flex-start">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>justify-content: flex-end</h3>
+        <p>Items are packed toward the end line</p>
+        <div class="flex-container justify-content-flex-end">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>justify-content: center</h3>
+        <p>Items are centered along the main axis</p>
+        <div class="flex-container justify-content-center">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>justify-content: space-between</h3>
+        <p>Items are evenly distributed; first item at start, last at end</p>
+        <div class="flex-container justify-content-space-between">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>justify-content: space-around</h3>
+        <p>Items are evenly distributed with equal space around each item</p>
+        <div class="flex-container justify-content-space-around">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>justify-content: space-evenly</h3>
+        <p>Items are distributed so that the spacing between any two items is equal</p>
+        <div class="flex-container justify-content-space-evenly">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <!-- ================================
+             ALIGN-ITEMS EXAMPLES
+             ================================ -->
+        <h2>3. align-items Property</h2>
+        <p>The <strong>align-items</strong> property aligns items along the cross axis (vertical when flex-direction is row).</p>
+
+        <h3>align-items: stretch (default)</h3>
+        <p>Items are stretched to fill the container (respecting min/max width)</p>
+        <div class="flex-container align-items-stretch">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>align-items: flex-start</h3>
+        <p>Items are aligned to the start of the cross axis</p>
+        <div class="flex-container align-items-flex-start">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>align-items: flex-end</h3>
+        <p>Items are aligned to the end of the cross axis</p>
+        <div class="flex-container align-items-flex-end">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>align-items: center</h3>
+        <p>Items are centered along the cross axis</p>
+        <div class="flex-container align-items-center">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>align-items: baseline</h3>
+        <p>Items are aligned along their text baseline</p>
+        <div class="flex-container align-items-baseline">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <!-- ================================
+             FLEX-WRAP EXAMPLES
+             ================================ -->
+        <h2>4. flex-wrap Property</h2>
+        <p>The <strong>flex-wrap</strong> property controls whether flex items wrap onto multiple lines.</p>
+
+        <h3>flex-wrap: nowrap (default)</h3>
+        <p>All items are forced onto one line (may shrink to fit)</p>
+        <div class="flex-container flex-wrap-nowrap">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+        </div>
+
+        <h3>flex-wrap: wrap</h3>
+        <p>Items wrap onto multiple lines from top to bottom</p>
+        <div class="flex-container flex-wrap-wrap">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+        </div>
+
+        <h3>flex-wrap: wrap-reverse</h3>
+        <p>Items wrap onto multiple lines from bottom to top</p>
+        <div class="flex-container flex-wrap-wrap-reverse">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+        </div>
+
+        <!-- ================================
+             ALIGN-CONTENT EXAMPLES
+             ================================ -->
+        <h2>5. align-content Property</h2>
+        <p>The <strong>align-content</strong> property aligns flex lines within the flex container. Note: Only works when there are multiple lines!</p>
+
+        <h3>align-content: flex-start</h3>
+        <p>Lines are packed to the start of the container</p>
+        <div class="flex-container align-content-flex-start">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+        </div>
+
+        <h3>align-content: flex-end</h3>
+        <p>Lines are packed to the end of the container</p>
+        <div class="flex-container align-content-flex-end">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+        </div>
+
+        <h3>align-content: center</h3>
+        <p>Lines are centered in the container</p>
+        <div class="flex-container align-content-center">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+        </div>
+
+        <h3>align-content: space-between</h3>
+        <p>Lines are evenly distributed; first at start, last at end</p>
+        <div class="flex-container align-content-space-between">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+        </div>
+
+        <h3>align-content: space-around</h3>
+        <p>Lines are evenly distributed with equal space around each line</p>
+        <div class="flex-container align-content-space-around">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+        </div>
+
+        <!-- ================================
+             GAP EXAMPLES
+             ================================ -->
+        <h2>6. gap, row-gap, column-gap Properties</h2>
+        <p>The <strong>gap</strong> property (and its row-gap/column-gap variants) creates space between flex items without using margins.</p>
+
+        <h3>gap: 20px</h3>
+        <p>Equal gap between all items (shorthand)</p>
+        <div class="flex-container gap-example">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>row-gap and column-gap separately</h3>
+        <p>Different gaps for rows and columns</p>
+        <div class="flex-container gap-row-column">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+            <div class="flex-item">Item 5</div>
+            <div class="flex-item">Item 6</div>
+        </div>
+
+        <!-- ================================
+             FLEX-FLOW EXAMPLES
+             ================================ -->
+        <h2>7. flex-flow Property</h2>
+        <p>The <strong>flex-flow</strong> property is a shorthand for flex-direction and flex-wrap combined.</p>
+
+        <h3>flex-flow: row wrap</h3>
+        <p>Row direction with wrapping (most common)</p>
+        <div class="flex-container flex-flow-row-wrap">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+        </div>
+
+        <h3>flex-flow: column nowrap</h3>
+        <p>Column direction without wrapping</p>
+        <div class="flex-container flex-flow-column-nowrap">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+        </div>
+
+        <h3>flex-flow: row-reverse wrap-reverse</h3>
+        <p>Row reverse with wrap reverse</p>
+        <div class="flex-container flex-flow-row-reverse-wrap-reverse">
+            <div class="flex-item">Item 1</div>
+            <div class="flex-item">Item 2</div>
+            <div class="flex-item">Item 3</div>
+            <div class="flex-item">Item 4</div>
+        </div>
+
+        <!-- ================================
+             FLEX ITEM PROPERTIES
+             ================================ -->
+        <h2>8. Flex Item Properties</h2>
+        <p>Properties that can be applied to individual flex items:</p>
+
+        <h3>order Property</h3>
+        <p>Controls the order of flex items (default is 0, can be negative or positive)</p>
+        <div class="flex-container order-example">
+            <div class="flex-item">Item 1 (order: 3)</div>
+            <div class="flex-item">Item 2 (order: 1)</div>
+            <div class="flex-item">Item 3 (order: 4)</div>
+            <div class="flex-item">Item 4 (order: 2)</div>
+            <div class="flex-item">Item 5 (order: 5)</div>
+        </div>
+
+        <h3>flex-grow Property</h3>
+        <p>Defines the ability of an item to grow (0 = cannot grow, positive numbers = can grow proportionally)</p>
+        <div class="flex-container flex-grow-example">
+            <div class="flex-item">grow: 1</div>
+            <div class="flex-item">grow: 2</div>
+            <div class="flex-item">grow: 3</div>
+        </div>
+
+        <h3>flex-shrink Property</h3>
+        <p>Defines the ability to shrink (0 = cannot shrink, 1 = can shrink, higher = shrinks more)</p>
+        <div class="flex-container flex-shrink-example">
+            <div class="flex-item">shrink: 0<br>(won't shrink)</div>
+            <div class="flex-item">shrink: 1</div>
+            <div class="flex-item">shrink: 2</div>
+        </div>
+
+        <h3>flex-basis Property</h3>
+        <p>Specifies the initial size of the item before growing/shrinking</p>
+        <div class="flex-container flex-basis-example">
+            <div class="flex-item">basis: 100px</div>
+            <div class="flex-item">basis: 200px</div>
+            <div class="flex-item">basis: 150px</div>
+        </div>
+
+        <h3>flex (shorthand) Property</h3>
+        <p>Combined shorthand: flex-grow flex-shrink flex-basis</p>
+        <div class="flex-container flex-shorthand-example">
+            <div class="flex-item">flex: 1 0 100px</div>
+            <div class="flex-item">flex: 2 0 150px</div>
+            <div class="flex-item">flex: 1 1 auto</div>
+        </div>
+
+        <h3>align-self Property</h3>
+        <p>Allows individual items to override the align-items property for the container</p>
+        <div class="flex-container align-self-example">
+            <div class="flex-item">flex-end</div>
+            <div class="flex-item">center</div>
+            <div class="flex-item">baseline</div>
+            <div class="flex-item">stretch</div>
+            <div class="flex-item">auto</div>
+        </div>
+
+        <!-- ================================
+             PRACTICAL EXAMPLES
+             ================================ -->
+        <h2>9. Practical Layout Examples</h2>
+        <p>Real-world use cases of flexbox:</p>
+
+        <h3>Responsive Card Grid</h3>
+        <p>Cards that automatically wrap and resize based on container width</p>
+        <div class="card-container">
+            <div class="card">
+                <div class="card-title">Card 1</div>
+                <div class="card-content">This is some content for card 1. Flexbox makes layout easy!</div>
+                <div class="card-footer">Footer</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Card 2</div>
+                <div class="card-content">This is some content for card 2.</div>
+                <div class="card-footer">Footer</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Card 3</div>
+                <div class="card-content">This is some content for card 3.</div>
+                <div class="card-footer">Footer</div>
+            </div>
+            <div class="card">
+                <div class="card-title">Card 4</div>
+                <div class="card-content">This is some content for card 4.</div>
+                <div class="card-footer">Footer</div>
+            </div>
+        </div>
+
+        <h3>Center Content Both Horizontally and Vertically</h3>
+        <p>Using justify-content and align-items together to center</p>
+        <div class="flex-container center-both">
+            <div class="flex-item">Centered!</div>
+        </div>
+
+    </section>
+  </main>
+</body>
+</html>

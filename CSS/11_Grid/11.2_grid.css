@@ -1,0 +1,464 @@
+/* ==========================================================================
+   CSS Grid Complete Reference 
+   ========================================================================== */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h1 { color: #333; margin-bottom: 15px; }
+h2 { color: #555; margin-top: 20px; margin-bottom: 10px; }
+p { margin-bottom: 15px; color: #666; }
+ul { margin-left: 20px; margin-bottom: 15px; }
+li { margin-bottom: 5px; }
+
+.example-box {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f9f9f9;
+    border-left: 4px solid #4CAF50;
+}
+
+/* ==========================================================================
+   GRID ITEM BASE STYLES
+   ========================================================================== */
+
+.grid-item {
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 10px;
+    min-height: 50px;
+}
+
+.grid-item:nth-child(odd) { background-color: #2196F3; }
+.grid-item:nth-child(even) { background-color: #FF9800; }
+
+.tall { min-height: 100px; }
+
+/* ==========================================================================
+   EXAMPLE 1: display Property
+   display: grid - creates block-level grid container
+   display: inline-grid - creates inline-level grid container
+   ========================================================================== */
+
+.display-grid {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   EXAMPLE 2: grid-template-columns and grid-template-rows
+   Define size of columns and rows
+   Values: px, %, fr, auto, minmax(), repeat()
+   ========================================================================== */
+
+.template-columns-rows {
+    display: grid;
+    /* Define 3 columns with different sizes */
+    grid-template-columns: 200px auto 1fr;
+    /* Define 3 rows */
+    grid-template-rows: 80px 80px 80px;
+    gap: 12px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   EXAMPLE 3: gap, row-gap, column-gap Properties
+   gap is shorthand for row-gap + column-gap
+   ========================================================================== */
+
+.gap-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60px 60px 60px;
+    /* gap: row-gap column-gap */
+    gap: 18px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   EXAMPLE 4: justify-content Property
+   Horizontally aligns the grid items inside the container
+   Works when grid is smaller than container
+   ========================================================================== */
+
+.justify-content-example {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    /* Container larger than content */
+    width: 400px;
+    height: 120px;
+    /* Horizontal alignment */
+    justify-content: space-evenly;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   EXAMPLE 5: align-content Property
+   Vertically aligns the grid items inside the container
+   Works when grid is smaller than container
+   ========================================================================== */
+
+.align-content-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 60px 60px 60px;
+    /* Container larger than content */
+    width: 300px;
+    height: 250px;
+    /* Vertical alignment of entire grid */
+    align-content: center;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   EXAMPLE 6: align-items Property
+   Specifies the default alignment for ALL items inside grid container
+   (along column axis/vertically)
+   ========================================================================== */
+
+.align-items-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 120px 120px;
+    gap: 12px;
+    /* Vertical alignment within each cell */
+    align-items: center;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.align-items-example .tall {
+    height: 100px;
+}
+
+/* ==========================================================================
+   EXAMPLE 7: place-content Property
+   Shorthand for align-content and justify-content
+   Format: align-content justify-content
+   ========================================================================== */
+
+.place-content-example {
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 80px 80px;
+    width: 350px;
+    height: 200px;
+    /* Shorthand: align-content justify-content */
+    place-content: center center;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   EXAMPLE 8: grid (Shorthand Property)
+   Shorthand for: grid-template-rows, grid-template-columns,
+   grid-template-areas, grid-auto-rows, grid-auto-columns, grid-auto-flow
+   ========================================================================== */
+
+.grid-shorthand {
+    /* Shorthand: row-template / column-template */
+    grid: 80px 80px / 1fr 1fr 1fr;
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+/* ==========================================================================
+   EXAMPLE 9: grid-template (Shorthand Property)
+   Shorthand for: grid-template-rows, grid-template-columns, and grid-areas
+   ========================================================================== */
+
+.grid-template-shorthand {
+    display: grid;
+    /* Shorthand for rows / columns */
+    grid-template: 60px 150px 60px / 1fr 3fr 1fr;
+    /* Named areas */
+    grid-template-areas: 
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.area-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.grid-template-shorthand .header {
+    grid-area: header;
+    background-color: #FF5722;
+    color: white;
+}
+
+.grid-template-shorthand .sidebar {
+    grid-area: sidebar;
+    background-color: #2196F3;
+    color: white;
+}
+
+.grid-template-shorthand .main {
+    grid-area: main;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* ==========================================================================
+   EXAMPLE 10: grid-row-start and grid-row-end Properties
+   Specifies where to start/end the grid item along the row axis (vertically)
+   ========================================================================== */
+
+.grid-row-start-end {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 80px 80px;
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.grid-row-start-end .row-start-1 {
+    grid-row-start: 1;
+    background-color: #E91E63;
+}
+
+.grid-row-start-end .row-end-3 {
+    grid-row-end: 3;
+    background-color: #9C27B0;
+}
+
+/* ==========================================================================
+   EXAMPLE 11: grid-column-start and grid-column-end Properties
+   Specifies where to start/end the grid item along the column axis (horizontally)
+   ========================================================================== */
+
+.grid-column-start-end {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 80px 80px;
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.grid-column-start-end .col-start-1 {
+    grid-column-start: 1;
+    background-color: #00BCD4;
+}
+
+.grid-column-start-end .col-end-3 {
+    grid-column-end: 3;
+    background-color: #8BC34A;
+}
+
+/* ==========================================================================
+   EXAMPLE 12: grid-row Property (Shorthand)
+   Shorthand for grid-row-start and grid-row-end
+   Format: start / end
+   ========================================================================== */
+
+.grid-row-shorthand {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 80px 80px;
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.grid-row-shorthand .row-span-2 {
+    /* Shorthand: start / span number */
+    grid-row: 1 / span 2;
+    background-color: #FF5722;
+}
+
+/* ==========================================================================
+   EXAMPLE 13: grid-column Property (Shorthand)
+   Shorthand for grid-column-start and grid-column-end
+   Format: start / end
+   ========================================================================== */
+
+.grid-column-shorthand {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 80px;
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.grid-column-shorthand .col-span-2 {
+    /* Shorthand: start / span number */
+    grid-column: 1 / span 2;
+    background-color: #3F51B5;
+}
+
+/* ==========================================================================
+   EXAMPLE 14: grid-area Property (for Grid Item)
+   Shorthand for: grid-row-start, grid-column-start, grid-row-end, grid-column-end
+   Format: row-start / column-start / row-end / column-end
+   ========================================================================== */
+
+.grid-area-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px 80px 80px;
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.grid-area-item .area-position {
+    /* Shorthand: row-start / col-start / row-end / col-end */
+    grid-area: 1 / 1 / 3 / 3;
+    background-color: #009688;
+}
+
+/* ==========================================================================
+   EXAMPLE 15: align-self Property
+   Aligns a specific grid item along the column axis (vertically)
+   Overrides align-items for that specific item
+   ========================================================================== */
+
+.align-self-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.align-self-example .align-self-start {
+    align-self: start;
+    background-color: #F44336;
+}
+
+.align-self-example .align-self-center {
+    align-self: center;
+    background-color: #2196F3;
+}
+
+.align-self-example .align-self-end {
+    align-self: end;
+    background-color: #4CAF50;
+}
+
+/* ==========================================================================
+   EXAMPLE 16: justify-self Property
+   Aligns a specific grid item along the row axis (horizontally)
+   ========================================================================== */
+
+.justify-self-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.justify-self-example .justify-self-start {
+    justify-self: start;
+    background-color: #FF9800;
+}
+
+.justify-self-example .justify-self-center {
+    justify-self: center;
+    background-color: #9C27B0;
+}
+
+.justify-self-example .justify-self-end {
+    justify-self: end;
+    background-color: #00BCD4;
+}
+
+/* ==========================================================================
+   EXAMPLE 17: place-self Property
+   Shorthand for align-self and justify-self
+   Format: align-self justify-self
+   ========================================================================== */
+
+.place-self-example {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    gap: 10px;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.place-self-example .place-self-center {
+    /* Shorthand: align-self justify-self */
+    place-self: center center;
+    background-color: #E91E63;
+}
+
+.place-self-example .place-self-start {
+    place-self: start start;
+    background-color: #3F51B5;
+    color: white;
+}
+
+.place-self-example .place-self-end {
+    place-self: end end;
+    background-color: #009688;
+    color: white;
+}

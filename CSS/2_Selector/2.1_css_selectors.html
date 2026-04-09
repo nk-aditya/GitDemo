@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors in CSS</title>
+    <link rel="stylesheet" href="2.2_css_selectors.css">
+     <link rel="shortcut icon" href="/CSS/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Introduction to CSS Selectors</h1>
+        <p>CSS selectors are patterns used to select the elements you want to style. They are a fundamental part of CSS and allow you to apply styles to specific HTML elements based on their attributes, position in the document, or relationship to other elements.</p>
+        <p>Type of CSS Selectors:</p>
+        <ul>
+            <li>Element Selectors</li>
+            <li>Class Selectors</li>
+            <li>ID Selectors</li>
+            <li>Attribute Selectors</li>
+            <li>Universal Selectors</li>
+            <li>Direct child Selectors</li>
+            <li>Descendant Selectors</li>
+            <li>Grouping Selectors</li>
+        </ul>
+    </header>
+
+    <main>
+        <article class="selectorsArticle">
+            <h2>Element Selectors</h2>
+            <p id="elementSelectorsPara">Element selectors target HTML elements by their tag name.
+            <br>For example, p { color: blue; } styles all paragraph elements.</p>
+        </article>
+        <article class="selectorsArticle">
+            <h2>Class Selectors</h2>
+            <p>Class selectors target elements with a specific class attribute.
+            <br>For example, .highlight { background-color: yellow; } styles elements with class="highlight".</p>
+        </article>
+        <article class="selectorsArticle">
+            <h2>ID Selectors</h2>
+            <p>ID selectors target elements with a specific ID attribute.
+            <br>For example, #header { font-size: 24px; } styles the element with id="header".</p>
+        </article>
+        <article class="selectorsArticle">
+            <h2>Attribute Selectors</h2>
+            <p>Attribute selectors target elements based on their attributes. 
+            <br>For example, [href] { color: red; } styles all elements with an href attribute.</p>
+        </article>
+        <article class="selectorsArticle">
+            <h2>Universal Selectors</h2>
+            <p>Universal selectors target all elements in the document.
+            <br>For example, * { margin: 0; padding: 0; } resets the margin and padding of all elements.</p>
+        </article>
+        <article class="selectorsArticle">
+            <h2>Direct child Selectors</h2>
+            <p>Direct child selectors target direct children of a parent element.
+            <br>For example, div > p { color: blue; } styles only paragraphs that are direct children of div elements.</p>
+        </article>
+        <article class="selectorsArticle">
+            <h2>Descendant Selectors / Nested Selectors</h2>
+            <p>Descendant selectors target elements that are descendants of a parent element.
+            <br>For example, div p { color: blue; } styles all paragraphs that are descendants of div elements.</p>
+        </article>
+        <article class="selectorsArticle">
+            <h2>Grouping Selectors</h2>
+            <p>Grouping selectors allow you to apply the same styles to multiple selectors.
+            <br>For example, h1, h2, h3 { color: green; } styles all h1, h2, and h3 elements with the same color.</p>
+        </article>
+
+        <h2>Order of Precedence</h2>
+        <p>The order of precedence for CSS selectors is as follows:</p>
+        <ol>
+            <li>Universal Selector (*)</li>
+            <li>Element Selectors (e.g., p, div)</li>
+            <li>Class Selectors (e.g., .highlight)</li>
+            <li>ID Selectors (e.g., #header)</li>
+        </ol>
+        <p>in increasing order</p>
+    </main>
+    
+</body>
+</html>

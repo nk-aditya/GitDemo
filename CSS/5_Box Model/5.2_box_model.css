@@ -1,0 +1,353 @@
+/* ============================================
+   CSS BOX MODEL - Complete Reference
+   ============================================ */
+
+/* 
+   BOX-SIZING: 
+   - content-box (default): width/height = content only
+   - border-box: width/height includes padding and border
+*/
+
+/* General box styling for all examples */
+.box {
+    /* Base styling */
+    background-color: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    
+    /* Default box model properties */
+    width: 150px;
+    height: 100px;
+    padding: 20px;
+    margin: 10px;
+    border: 5px solid #2c3e50;
+}
+
+/* ============================================
+   CONTENT AREA
+   ============================================ */
+/* 
+   The content area is the innermost part of the box model.
+   Its size is controlled by width and height properties.
+*/
+.content-example {
+    /* Content dimensions only */
+    width: 150px;
+    height: 80px;
+    padding: 0;
+    margin: 10px;
+    border: none;
+}
+
+/* ============================================
+   PADDING
+   ============================================ */
+/* 
+   Padding creates space between content and border.
+   Can be set for all sides or individually.
+*/
+
+/* Padding on all sides */
+.padding-example {
+    padding: 30px;
+}
+
+/* Individual padding - top, right, bottom, left */
+.padding-individual {
+    padding-top: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    
+    /* Flex to show the padding areas */
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* Shorthand: padding: top right bottom left */
+.padding-individual span:nth-child(1)::before { content: "Top: 10px - "; }
+.padding-individual span:nth-child(2)::before { content: "Right: 20px - "; }
+.padding-individual span:nth-child(3)::before { content: "Bottom: 30px - "; }
+.padding-individual span:nth-child(4)::before { content: "Left: 40px - "; }
+
+/* ============================================
+   BORDER
+   ============================================ */
+/* 
+   Border surrounds padding and content.
+   Can have different styles, widths, and colors.
+*/
+
+/* Border styles */
+.border-solid {
+    border: 5px solid #2c3e50;
+}
+
+.border-dashed {
+    border: 5px dashed #e74c3c;
+}
+
+.border-dotted {
+    border: 5px dotted #9b59b6;
+}
+
+.border-radius {
+    border: 5px solid #27ae60;
+    border-radius: 20px;
+}
+
+/* Individual border sides */
+.border-individual {
+    border-top: 3px solid #e74c3c;
+    border-right: 3px solid #3498db;
+    border-bottom: 3px solid #f39c12;
+    border-left: 3px solid #9b59b6;
+}
+
+/* ============================================
+   MARGIN
+   ============================================ */
+/* 
+   Margin creates space between elements.
+   It pushes elements away from each other.
+*/
+
+.margin-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    background-color: #ecf0f1;
+    padding: 10px;
+}
+
+.margin-box {
+    margin: 20px;
+}
+
+/* Center element with margin auto */
+.margin-auto {
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+}
+
+/* Individual margin */
+.margin-individual {
+    margin-top: 10px;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    margin-left: 40px;
+}
+
+/* ============================================
+   BOX SIZING
+   ============================================ */
+/* 
+   box-sizing controls how width/height are calculated:
+   - content-box (default): width = content only
+   - border-box: width includes padding and border
+*/
+
+.box-sizing-demo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    background-color: #ecf0f1;
+}
+
+.content-box {
+    /* Default behavior - padding and border ADD to width */
+    box-sizing: content-box;
+    width: 200px;
+    padding: 20px;
+    border: 10px solid #2c3e50;
+}
+
+.border-box {
+    /* Padding and border included in width */
+    box-sizing: border-box;
+    width: 200px;
+    padding: 20px;
+    border: 10px solid #2c3e50;
+}
+
+/* ============================================
+   COMPLETE BOX MODEL EXAMPLE
+   ============================================ */
+/* Demonstrates all box model properties together */
+.complete-example {
+    /* Content */
+    width: 250px;
+    height: 150px;
+    
+    /* Padding */
+    padding: 25px;
+    
+    /* Border */
+    border: 8px solid #e74c3c;
+    border-radius: 10px;
+    
+    /* Margin */
+    margin: 20px auto;
+    
+    /* Box sizing */
+    box-sizing: border-box;
+    
+    /* Additional styling */
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* ============================================
+   DISPLAY PROPERTY
+   ============================================ */
+/* 
+   Display property controls how elements behave:
+   - inline: flows with text, no width/height
+   - block: takes full width, breaks lines
+   - inline-block: flows with text but has dimensions
+*/
+
+.display-demo {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #ecf0f1;
+}
+
+/* Inline elements */
+.inline-box {
+    display: inline;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #3498db;
+    color: white;
+}
+
+/* Block elements */
+.block-box {
+    display: block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #e74c3c;
+    color: white;
+    width: 150px;
+}
+
+/* Inline-block elements */
+.inline-block-box {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    background-color: #27ae60;
+    color: white;
+    width: 150px;
+}
+
+/* ============================================
+   EXAMPLE SECTION STYLING
+   ============================================ */
+
+#example {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.example-container {
+    background: white;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.example-container h2 {
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+}
+
+.example-container p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+/* ============================================
+   GENERAL PAGE STYLING
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #3498db;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+section h2 {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+section p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #3498db;
+    margin: 30px 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}

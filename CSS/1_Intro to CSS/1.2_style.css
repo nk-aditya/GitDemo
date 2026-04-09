@@ -1,0 +1,18 @@
+.exampleH{
+    color: rgb(185, 173, 211);
+    background-color: black;
+}
+
+.exampleb{
+    background-color: rgb(100, 100, 163);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.examplep{
+    font-size: 18px;
+    color: green;
+}

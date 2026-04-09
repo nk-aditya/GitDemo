@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms in HTML</title>
+</head>
+<body>
+    <b>## Forms in HTML</b> <br>
+    Forms are used to collect user input. They can contain various types of input elements, such as text fields, checkboxes, radio buttons, and submit buttons. <br>
+ 
+    <br>
+
+    <b>### Basic Form Structure</b><br>
+    A basic form is created using the <code>&lt;form&gt;</code> tag.<br>
+    - action : attribute specifies where to send the form data when the form is submitted. <br>
+    - method : attribute specifies the HTTP method to use when sending form data (GET or POST). <br>
+        -- GET > sends data in the URL (useful for simple searches) <br>
+        -- POST > sends data in the request body (useful for sensitive data) <br>
+    - placeholder : attribute provides a hint to the user about what to enter in the input field. It is displayed inside the input field when it is empty and disappears when the user starts typing. <br>
+    For example: <br><br>
+    <form action="/submit" method="POST">
+        <!-- label gives a description for the input field and is associated with the input using the "for" attribute, which should match the "id" of the input field. -->
+        <label for="name">Name:</label> 
+        <!-- input for user to enter their name. The "type" attribute specifies the type of input (in this case, "text"). The "id" and "name" attributes are used to identify the input field when the form is submitted. -->
+        <input type="text" id="name" name="name" placeholder="Enter your name"><hr>
+        
+        <label for="email">Email:</label>
+        <!-- input type "email" is used for input fields that should contain an email address. It provides built-in validation to ensure that the entered value is in the correct email format. -->
+        <input type="email" id="email" name="email" placeholder="Enter your email"><hr>
+        <!-- input type "submit" creates a submit button that users can click to submit the form. The "value" attribute specifies the text displayed on the button. When the button is clicked, the form data is sent to the URL specified in the "action" attribute using the method specified in the "method" attribute. -->
+        <input type="submit" value="Submit">
+    </form>
+
+    <br><br>
+    
+    <b>### Type of Input</b>
+    <ul>
+        <li><code>text</code>: A single-line text input field.</li>
+        <li><code>password</code>: A single-line text input field that hides the entered characters.</li>
+        <li><code>email</code>: An input field for email addresses with built-in validation.</li>
+        <li><code>number</code>: An input field for numeric values with optional min and max attributes.</li>
+        <li><code>date</code>: An input field for selecting a date.</li>
+        <li><code>checkbox</code>: A checkbox that can be toggled on or off.</li>
+        <li><code>radio</code>: A radio button that allows users to select one option from a group.</li>
+        <li><code>color</code>: An input field for selecting a color.</li>
+        <li><code>file</code>: An input field that allows users to upload files.</li>
+        <li><code>submit</code>: A button that submits the form data to the server.</li>
+        <li><code>reset</code>: A button that resets all form fields to their default values.</li>
+        <li><code>hidden</code>: An input field that is not visible to the user but can store data to be submitted with the form.</li>
+    </ul>
+    For Example: <br>
+    <form action="/submit" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username"><hr>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password"><hr>
+        
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" placeholder="Enter your email"><hr>
+
+        <label for="number">Age:</label>
+        <input type="number" id="number" name="number" placeholder="Enter your age"> <hr>
+
+        <label for="date">Date of birth:</label>
+        <input type="date" id="date" name="date" > <hr>
+
+        <label for="adult">Adult(18+)</label>
+        <input type="checkbox" id="adult" name="adult" value="adult"> <hr>
+
+        <label for="gender">Gender:</label>
+        <label for="Male">Male</label>
+        <input type="radio" id="Male" name="gender" value="male">
+        <label for="Female">Female</label>
+        <input type="radio" id="Female" name="gender" value="female"><hr>
+
+        <label for="color">Favorite Color:</label>
+        <input type="color" id="color" name="color" value="#0000ff"> <hr>
+
+        <label for="Country">Country:</label>
+        <select id="Country" name="Country">
+            <option selected disabled>Choose your country</option>
+            <option value="USA">United States</option>
+            <option value="UK" >United Kingdom</option>
+            <option value="Canada">Canada</option>
+            <option value="India">India</option>
+            <option value="Australia">Australia</option>
+            <option value="China">China</option>
+        </select><hr>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" rows="4" cols="50" placeholder="Enter your feedback here..."></textarea><hr>
+
+        <label for="reset">Reset Form</label>
+        <input type="reset" id="reset" value="reset"> <hr>
+
+        <label for="submit">Submit Form</label>
+        <input type="submit" id="Submit" value="Submit">
+    </form>
+
+    <br><br>
+
+    <b>### Form Validation</b><br>
+    HTML5 provides built-in form validation features. You can use attributes like <code>required</code>, <code>minlength</code>, <code>maxlength</code>, <code>pattern</code>, and more to specify validation rules for form fields. <br>
+    - required : makes the field mandatory. <br>
+    - minlength : specifies the minimum number of characters allowed. <br>
+    - maxlength : specifies the maximum number of characters allowed. <br>
+    For example: <br><br>
+    <form action="/submit" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter username" required minlength="3" maxlength="15">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter email" required>
+        
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

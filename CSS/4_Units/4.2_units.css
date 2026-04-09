@@ -1,0 +1,19 @@
+/* vh , vw */
+main{
+    border: 2px solid rgb(0, 255, 17);
+    height: 70%; /*not working */
+    height: 150vh; /*working */
+    width: 200vw; /*working */
+}
+
+/* px */
+ul{
+    border:2px solid rgb(255, 0, 0);
+    border-radius: 5px;
+}
+
+/* percentage (but not recommended) */
+section{
+    border:2px solid rgb(0, 0, 0);
+    border-radius: 5%;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Units in CSS</title>
+    <link rel="stylesheet" href="4.2_units.css">
+     <link rel="shortcut icon" href="/CSS/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h2>Units in CSS</h2>
+    </header>
+    <main>
+        <section>
+            <h3># Absolute Units</h3>
+            <p>Absolute units are fixed and do not change based on the context. They are typically used when you want to ensure that an element has a specific size regardless of the device or screen size.</p>
+            <ul>
+                <li><strong>px (pixels):</strong> A pixel is a unit of measurement that represents a single dot on the screen. It is commonly used for defining font sizes, margins, and other dimensions.</li>
+                <li><strong>cm (centimeters):</strong> A centimeter is a unit of length in the metric system. It is often used in print media or when precise physical measurements are required.</li>
+                <li><strong>mm (millimeters):</strong> A millimeter is also a unit of length in the metric system, equal to one-tenth of a centimeter. It is used for similar purposes as centimeters but allows for finer precision.</li>
+                <li><strong>in (inches):</strong> An inch is a unit of length in the imperial system, equal to 2.54 centimeters. It is commonly used in print media and for defining dimensions in certain contexts.</li>
+                <li><strong>pt (points):</strong> A point is a unit of measurement used in typography, equal to 1/72 of an inch. It is often used for defining font sizes.</li>
+                <li><strong>pc (picas):</strong> A pica is another typographic unit, equal to 12 points or 1/6 of an inch. It is less commonly used than points but can be useful for certain design purposes.</li>
+            </ul>
+
+            <h3>Situations where each unit is most appropriate</h3>
+            <ul>
+                <li><strong>px:</strong> Best for precise control over element sizes, especially in web design where consistency across devices is important.</li>
+                <li><strong>cm and mm:</strong> Ideal for print media or when you need to specify physical dimensions that will be consistent regardless of the display.</li>
+                <li><strong>in:</strong> Useful in print media or when working with designs that require measurements in inches, such as certain types of packaging or posters.</li>
+                <li><strong>pt and pc:</strong> Commonly used in typography for defining font sizes and spacing in printed materials or digital documents where typographic precision is important.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h3># Relative Units</h3>
+            <p>Relative units are based on other units and change depending on the context. They are commonly used in responsive design to ensure that elements scale appropriately across different devices and screen sizes.</p>
+            <ul>
+                <li><strong>em:</strong> An em is a relative unit that is based on the font size of the parent element. 1em is equal to the current font size of the parent element.</li>
+                <li><strong>rem:</strong> A rem (root em) is a relative unit that is based on the font size of the root element (html). 1rem is equal to the font size of the html element.</li>
+                <li><strong>% (percentage):</strong> A percentage is a relative unit that is based on a parent element's value. For example, 50% of an element's width is half of its parent's width.</li>
+                <li><strong>vw (viewport width):</strong> A vw unit is relative to 1% of the viewport's width. For example, 10vw is 10% of the viewport's width.</li>
+                <li><strong>vh (viewport height):</strong> A vh unit is relative to 1% of the viewport's height. For example, 10vh is 10% of the viewport's height.</li>
+                <li><strong>vmin:</strong> A vmin unit is relative to 1% of the smaller dimension (width or height) of the viewport.</li>
+                <li><strong>vmax:</strong> A vmax unit is relative to 1% of the larger dimension (width or height) of the viewport.</li>
+            </ul>
+            <h3>Situations where each unit is most appropriate</h3>
+            <ul>
+                <li><strong>em:</strong> Best for scaling elements based on the font size of their parent, making it useful for responsive typography and spacing.</li>
+                <li><strong>rem:</strong> Ideal for maintaining consistent sizing across a website, as it is based on the root font size. It allows for easy adjustments by changing the root font size.</li>
+                <li><strong>%:</strong> Useful for creating flexible layouts that adapt to the size of their parent elements, such as fluid grids or responsive images.</li>
+                <li><strong>vw and vh:</strong> Great for creating full-screen layouts or elements that need to scale with the viewport size, such as hero sections or background images.</li>
+                <li><strong>vmin and vmax:</strong> Useful for ensuring that elements scale appropriately based on the smaller or larger dimension of the viewport, providing flexibility in responsive design.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

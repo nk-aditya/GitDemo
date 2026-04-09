@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display in CSS</title>
+    <link rel="stylesheet" href="7.2_display.css">
+    <link rel="shortcut icon" href="/CSS/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+    <section>
+    <h1>Display in CSS</h1>
+    <p>The <code>display</code> property in CSS is used to specify the display behavior of an element. It determines how an element is displayed on the web page and how it interacts with other elements.</p>
+
+    <h2>Common Display Values</h2>
+    <ul>
+        <li><code>block</code>: The element is displayed as a block-level element, taking up the full width available and starting on a new line.</li>
+        <li><code>inline</code>: The element is displayed as an inline element, taking up only as much width as necessary and allowing other elements to be on the same line.</li>
+        <li><code>inline-block</code>: The element is displayed as an inline-level block container. It allows setting width and height but still flows with text.</li>
+        <li><code>none</code>: The element is not displayed at all (it will not take up any space).</li>
+        <li><code>flex</code>: The element becomes a flex container, allowing for flexible layouts.</li>
+        <li><code>grid</code>: The element becomes a grid container, enabling grid-based layouts.</li>
+    </ul>
+
+    <h2>Example Usage</h2>
+    <div class="example">
+        <div class="block">This is a block-level element.</div>
+        <span class="inline">This is an inline element.</span>
+        <div class="inline-block">This is an inline-block element.</div>
+    </div>
+    </section>
+
+    <hr>
+
+    <section id="example">
+        <h1>Example: Display in Practice</h1>
+        <p>This section demonstrates all the Display properties with practical examples.</p>
+
+        <!-- Display Block Example -->
+        <div class="example-container">
+            <h2>Display: Block</h2>
+            <p>Block-level elements take up the full width available and start on a new line.</p>
+            <div class="display-demo">
+                <div class="box block-element">Block 1</div>
+                <div class="box block-element">Block 2</div>
+                <div class="box block-element">Block 3</div>
+            </div>
+        </div>
+
+        <!-- Display Inline Example -->
+        <div class="example-container">
+            <h2>Display: Inline</h2>
+            <p>Inline elements take up only as much width as necessary.</p>
+            <div class="display-demo">
+                <span class="box inline-element">Inline 1</span>
+                <span class="box inline-element">Inline 2</span>
+                <span class="box inline-element">Inline 3</span>
+            </div>
+        </div>
+
+        <!-- Display Inline-Block Example -->
+        <div class="example-container">
+            <h2>Display: Inline-Block</h2>
+            <p>Inline-block elements allow setting width and height but still flow with text.</p>
+            <div class="display-demo">
+                <span class="box inline-block-element">Inline-Block 1</span>
+                <span class="box inline-block-element">Inline-Block 2</span>
+                <span class="box inline-block-element">Inline-Block 3</span>
+            </div>
+        </div>
+
+        <!-- Display None Example -->
+        <div class="example-container">
+            <h2>Display: None</h2>
+            <p>The element is not displayed at all and takes up no space.</p>
+            <div class="display-demo">
+                <div class="box">Visible 1</div>
+                <div class="box hidden-element">This is hidden</div>
+                <div class="box">Visible 2</div>
+            </div>
+        </div>
+
+        <!-- Display Flex Example -->
+        <div class="example-container">
+            <h2>Display: Flex</h2>
+            <p>Flexbox layout - the element becomes a flex container.</p>
+            <div class="display-demo flex-container">
+                <div class="box flex-item">Flex 1</div>
+                <div class="box flex-item">Flex 2</div>
+                <div class="box flex-item">Flex 3</div>
+            </div>
+        </div>
+
+        <!-- Flex Direction Example -->
+        <div class="example-container">
+            <h2>Flex Direction</h2>
+            <p>Controls the direction flex items are placed.</p>
+            <div class="display-demo flex-container flex-row">
+                <div class="box flex-item">Row 1</div>
+                <div class="box flex-item">Row 2</div>
+                <div class="box flex-item">Row 3</div>
+            </div>
+        </div>
+
+        <!-- Justify Content Example -->
+        <div class="example-container">
+            <h2>Justify Content</h2>
+            <p>Defines alignment along the main axis.</p>
+            <div class="display-demo flex-container justify-center">
+                <div class="box flex-item">Center</div>
+                <div class="box flex-item">Center</div>
+            </div>
+        </div>
+
+        <!-- Align Items Example -->
+        <div class="example-container">
+            <h2>Align Items</h2>
+            <p>Defines alignment along the cross axis.</p>
+            <div class="display-demo flex-container align-center" style="height: 100px;">
+                <div class="box flex-item">Center</div>
+                <div class="box flex-item">Center</div>
+            </div>
+        </div>
+
+        <!-- Display Grid Example -->
+        <div class="example-container">
+            <h2>Display: Grid</h2>
+            <p>Grid layout for two-dimensional layouts.</p>
+            <div class="display-demo grid-container">
+                <div class="box grid-item">Grid 1</div>
+                <div class="box grid-item">Grid 2</div>
+                <div class="box grid-item">Grid 3</div>
+                <div class="box grid-item">Grid 4</div>
+            </div>
+        </div>
+
+        <!-- Grid Columns Example -->
+        <div class="example-container">
+            <h2>Grid Template Columns</h2>
+            <p>Defines the columns of the grid.</p>
+            <div class="display-demo grid-container grid-cols-3">
+                <div class="box grid-item">Column 1</div>
+                <div class="box grid-item">Column 2</div>
+                <div class="box grid-item">Column 3</div>
+            </div>
+        </div>
+
+        <!-- Grid Gap Example -->
+        <div class="example-container">
+            <h2>Grid Gap</h2>
+            <p>Defines the gap between grid items.</p>
+            <div class="display-demo grid-container grid-gap">
+                <div class="box grid-item">Gap 1</div>
+                <div class="box grid-item">Gap 2</div>
+                <div class="box grid-item">Gap 3</div>
+                <div class="box grid-item">Gap 4</div>
+            </div>
+        </div>
+
+        <!-- Visibility Example -->
+        <div class="example-container">
+            <h2>Visibility vs Display None</h2>
+            <p>visibility:hidden takes space, display:none does not.</p>
+            <div class="display-demo">
+                <div class="box">Visible 1</div>
+                <div class="box visibility-hidden">Hidden</div>
+                <div class="box">Visible 2</div>
+            </div>
+        </div>
+
+    </section>
+    
+    </main>
+</body>
+</html>

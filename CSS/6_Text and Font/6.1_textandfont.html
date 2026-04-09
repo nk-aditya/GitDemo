@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text & Fonts</title>
+    <link rel="stylesheet" href="6.2_textandfont.css">
+    <link rel="shortcut icon" href="/CSS/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+   <main>
+    <section id="text">
+        <h1>Text Styling</h1> 
+        <p>This section covers various CSS properties that can be used to style text on a webpage. You can change the font, size, color, and more to make your text look exactly how you want it.</p>
+        <ul>
+            <li>Text Color</li>
+            <li>Text Alignment</li>
+            <li>Text Decoration</li>
+            <li>Text Transformation</li>
+            <li>Text Spacing</li>
+            <li>Text Shadow</li>
+        </ul>
+        <p>These are some major text styling properties in CSS.</p>
+
+        <div id="textcolor">
+            <h2>#Text Color</h2>
+            <p>You can change the color of your text using the <code>color</code> property. You can specify colors using color names, hex codes, RGB, RGBA, HSL, and HSLA values.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    color: red; /* Using color name */
+                }
+                h1 {
+                    color: #00ff00; /* Using hex code */
+                }
+                span {
+                    color: rgb(0, 0, 255); /* Using RGB */
+                }
+            </pre>
+        </div>
+
+        <div id="textAlignment">
+            <h2>#Text Alignment</h2>
+            <p>The <code>text-align</code> property is used to set the horizontal alignment of text. The possible values are <code>left</code>, <code>right</code>, <code>center</code>, and <code>justify</code>.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    text-align: center; /* Center align text */
+                }
+                h1 {
+                    text-align: left; /* Left align text */
+                }
+                div {
+                    text-align: right; /* Right align text */
+                }
+            </pre>
+        </div>
+
+        <div id="textDecoration">
+            <h2>#Text Decoration</h2>
+            <p>The <code>text-decoration</code> property is used to add decoration to text, such as underlines, overlines, and line-throughs. You can also specify the color and style of the decoration.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    text-decoration: underline; /* Underline text */
+                }
+                h1 {
+                    text-decoration: overline; /* Overline text */
+                }
+                span {
+                    text-decoration: line-through; /* Line through text */
+                }
+            </pre>
+        </div>
+
+        <div id="textTransformation">
+            <h2>#Text Transformation</h2>
+            <p>The <code>text-transform</code> property is used to control the capitalization of text. The possible values are <code>uppercase</code>, <code>lowercase</code>, and <code>capitalize</code>.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    text-transform: uppercase; /* Convert text to uppercase */
+                }
+                h1 {
+                    text-transform: lowercase; /* Convert text to lowercase */
+                }
+                span {
+                    text-transform: capitalize; /* Capitalize the first letter of each word */
+                }
+            </pre>
+        </div>
+
+        <div id="textSpacing">
+            <h2>#Text Spacing</h2>
+            <p>CSS provides several properties to control the spacing of text, including <code>letter-spacing</code>, <code>word-spacing</code>, and <code>line-height</code>.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    letter-spacing: 2px; /* Increase space between letters */
+                }
+                h1 {
+                    word-spacing: 10px; /* Increase space between words */
+                }
+                div {
+                    line-height: 1.5; /* Set line height */
+                }
+            </pre>
+        </div>
+
+        <div id="textShadow">
+            <h2>#Text Shadow</h2>
+            <p>The <code>text-shadow</code> property is used to add shadow effects to text. You can specify the horizontal and vertical offsets, blur radius, and color of the shadow.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Add a shadow to text */
+                }
+            </pre>
+        </div>
+    </section>
+<hr>
+    <section id="font">
+        <h1>Font Styling</h1>
+        <p>This section covers various CSS properties that can be used to style fonts on a webpage. You can change the font family, size, weight, and more to make your text look exactly how you want it.</p>
+        <ul>
+            <li>Font Family</li>
+            <li>Font Size</li>
+            <li>Font Weight</li>
+            <li>Font Style</li>
+            <li>Font Variant</li>
+            <li>Font Stretch</li>
+        </ul>
+        <p>These are some major font styling properties in CSS.</p>
+
+        <div id="fontFamily">
+            <h2>#Font Family</h2>
+            <p>The <code>font-family</code> property is used to specify the font of an element. You can specify multiple font names as a fallback mechanism in case the preferred font is not available.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    font-family: Arial, sans-serif; /* Use Arial, or if not available, use any sans-serif font */
+                }
+                h1 {
+                    font-family: 'Times New Roman', serif; /* Use Times New Roman, or if not available, use any serif font */
+                }
+            </pre>
+        </div>
+
+        <div id="fontSize">
+            <h2>#Font Size</h2>
+            <p>The <code>font-size</code> property is used to specify the size of the font. You can use various units such as pixels, ems, rems, percentages, and more.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    font-size: 16px; /* Set font size to 16 pixels */
+                }
+                h1 {
+                    font-size: 2em; /* Set font size to 2 times the size of the parent element */
+                }
+            </pre>
+        </div>
+
+        <div id="fontWeight">
+            <h2>#Font Weight</h2>
+            <p>The <code>font-weight</code> property is used to specify the weight (or boldness) of the font. You can use keywords like <code>normal</code>, <code>bold</code>, or numeric values from 100 to 900.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    font-weight: normal; /* Set font weight to normal */
+                }
+                h1 {
+                    font-weight: bold; /* Set font weight to bold */
+                }
+            </pre>
+        </div>
+
+        <div id="fontStyle">
+            <h2>#Font Style</h2>
+            <p>The <code>font-style</code> property is used to specify the style of the font. The possible values are <code>normal</code>, <code>italic</code>, and <code>oblique</code>.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    font-style: normal; /* Set font style to normal */
+                }
+                h1 {
+                    font-style: italic; /* Set font style to italic */
+                }
+            </pre>
+        </div>
+
+        <div id="fontVariant">
+            <h2>#Font Variant</h2>
+            <p>The <code>font-variant</code> property is used to specify whether the text should be displayed in small-caps. The possible values are <code>normal</code> and <code>small-caps</code>.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    font-variant: normal; /* Set font variant to normal */
+                }
+                h1 {
+                    font-variant: small-caps; /* Set font variant to small-caps */
+                }
+            </pre>
+        </div>
+
+        <div id="fontStrecth">
+            <h2>#Font Stretch</h2>
+            <p>The <code>font-stretch</code> property is used to specify the width of the font. The possible values are <code>normal</code>, <code>condensed</code>, <code>expanded</code>, and more.</p>
+            <p>Example:</p>
+            <pre>
+                p {
+                    font-stretch: normal; /* Set font stretch to normal */
+                }
+                h1 {
+                    font-stretch: expanded; /* Set font stretch to expanded */
+                }
+            </pre>
+        </div>
+
+        <div id="importantPoint">
+            <h1>Important Points About Font Properties</h1>
+            <div id="genericFontFamiles">
+                <h2>#Generic Font Families</h2>
+                <p>In addition to specific font names, CSS also provides generic font families that can be used as a fallback. These include:</p>
+                <ul>
+                    <li><code>serif</code>: Fonts with small lines at the ends of characters (e.g., Times New Roman).</li>
+                    <li><code>sans-serif</code>: Fonts without small lines at the ends of characters (e.g., Arial).</li>
+                    <li><code>monospace</code>: Fonts where each character takes up the same amount of space (e.g., Courier New).</li>
+                    <li><code>cursive</code>: Fonts that mimic handwriting (e.g., Brush Script MT).</li>
+                    <li><code>fantasy</code>: Decorative fonts that are typically used for titles or headings (e.g., Impact).</li>
+                </ul>
+            </div>
+
+            <div id="webSafeFonts">
+                <h2>#Web Safe Fonts</h2>
+                <p>Web safe fonts are fonts that are widely available across different operating systems and devices. Some common web safe fonts include:</p>
+                <ul>
+                    <li>Arial</li>
+                    <li>Verdana</li>
+                    <li>Times New Roman</li>
+                    <li>Courier New</li>
+                    <li>Georgia</li>
+                    <li>Trebuchet MS</li>
+                </ul>
+            </div>
+
+            <div id="fallbackFonts">
+                <h2>#Fallback Fonts</h2>
+                <p>When specifying font families, it's important to provide fallback options in case the preferred font is not available on the user's device. This can be done by listing multiple font names in the <code>font-family</code> property, separated by commas. The browser will use the first available font from the list.</p>
+                <p>Example:</p>
+                <pre>
+                    p {
+                        font-family: 'Open Sans', Arial, sans-serif; /* Use Open Sans, or if not available, use Arial, or if not available, use any sans-serif font */
+                    }
+                </pre>
+            </div>
+
+            <div id="googleFonts">
+                <h2>#Google Fonts</h2>
+                <p>Google Fonts is a popular service that provides a wide variety of free fonts that can be easily integrated into your website. To use a Google Font, you can include a link to the font in the <code>&lt;head&gt;</code> section of your HTML document and then specify the font in your CSS.</p>
+                <p>Example:</p>
+                <pre>
+                    &lt;head&gt;
+                        &lt;link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"&gt;
+                    &lt;/head&gt;
+
+                    p {
+                        font-family: 'Roboto', sans-serif; /* Use Roboto font from Google Fonts */
+                    }
+                </pre>
+            </div>
+        </div>
+
+        <div id="fontPairingRules">
+            <h1>Font Pairing Rules</h1>
+            <p>When using multiple fonts on a webpage, it's important to follow some basic font pairing rules to ensure that the fonts complement each other and create a visually appealing design. Here are some general guidelines for font pairing:</p>
+            <dl>
+                <dt><b>1.Compliment</b></dt>
+                <dd>It is always safe to find font pairings that complement one. <br>A great font combination should harmonize, without being too similar or too different.</dd>
+
+                <dt><b>2. Use Font Superfamilies</b></dt>
+                <dd>A font superfamily is a set of fonts designed to work well together. So, using different fonts within the same superfamily is safe. <br>For example, the Lucida superfamily contains the following fonts: Lucida Sans, Lucida Serif, Lucida Typewriter Sans, Lucida Typewriter Serif and Lucida Math.</dd>
+
+                <dt><b>3. Contrast is King</b></dt>
+                <dd>Two fonts that are too similar will often conflict. However, contrasts, done the right way, brings out the best in each font. <br>Example: Combining serif with sans serif is a well known combination. <br>A strong superfamily includes both serif and sans serif variations of the same font (e.g. Lucida and Lucida Sans).</dd>
+
+                <dt><b>4. Choose Only One Boss</b></dt>
+                <dd>One font should be the boss. This establishes a hierarchy for the fonts on your page. This can be achieved by varying the size, weight and color.</dd>
+            </dl>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="example">
+        <h1>Example: Text & Font Styling in Practice</h1>
+        <p>This section demonstrates all the text and font properties we've learned in practical examples.</p>
+
+        <!-- Text Properties Examples -->
+        <div class="example-container">
+            <h2>Text Properties Examples</h2>
+            
+            <div class="text-example text-color-example">
+                <h3>Text Color</h3>
+                <p class="color-name">This text uses a color name (red).</p>
+                <p class="color-hex">This text uses a hex code (#3498db).</p>
+                <p class="color-rgb">This text uses RGB value (rgb(155, 89, 182)).</p>
+                <p class="color-rgba">This text uses RGBA with transparency (rgba(52, 73, 94, 0.8)).</p>
+            </div>
+
+            <div class="text-example text-align-example">
+                <h3>Text Alignment</h3>
+                <p class="align-left">This text is left aligned.</p>
+                <p class="align-right">This text is right aligned.</p>
+                <p class="align-center">This text is center aligned.</p>
+                <p class="align-justify">This text is justified. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+
+            <div class="text-example text-decoration-example">
+                <h3>Text Decoration</h3>
+                <p class="decoration-underline">This text has an underline.</p>
+                <p class="decoration-overline">This text has an overline.</p>
+                <p class="decoration-line-through">This text has a line through it.</p>
+                <p class="decoration-wavy">This text has a wavy underline.</p>
+            </div>
+
+            <div class="text-example text-transform-example">
+                <h3>Text Transformation</h3>
+                <p class="transform-uppercase">this text is converted to uppercase.</p>
+                <p class="transform-lowercase">THIS TEXT IS CONVERTED TO LOWERCASE.</p>
+                <p class="transform-capitalize">this text has each word capitalized.</p>
+            </div>
+
+            <div class="text-example text-spacing-example">
+                <h3>Text Spacing</h3>
+                <p class="letter-spacing">This text has increased letter spacing.</p>
+                <p class="word-spacing">This text has increased word spacing.</p>
+                <p class="line-height">This text has increased line height for better readability. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+            </div>
+
+            <div class="text-example text-shadow-example">
+                <h3>Text Shadow</h3>
+                <p class="shadow-basic">This text has a basic shadow.</p>
+                <p class="shadow-color">This text has a colored shadow.</p>
+                <p class="shadow-blur">This text has a blurred shadow.</p>
+                <p class="shadow-multiple">This text has multiple shadows.</p>
+            </div>
+        </div>
+
+        <!-- Font Properties Examples -->
+        <div class="example-container">
+            <h2>Font Properties Examples</h2>
+
+            <div class="font-example font-family-example">
+                <h3>Font Family</h3>
+                <p class="font-serif">This text uses Serif font family (Times New Roman).</p>
+                <p class="font-sans-serif">This text uses Sans-Serif font family (Arial).</p>
+                <p class="font-monospace">This text uses Monospace font family (Courier New).</p>
+                <p class="font-cursive">This text uses Cursive font family (Brush Script MT).</p>
+                <p class="font-fantasy">This text uses Fantasy font family (Impact).</p>
+                <p class="font-google">This text uses Google Font (Roboto).</p>
+            </div>
+
+            <div class="font-example font-size-example">
+                <h3>Font Size</h3>
+                <p class="size-px">This text is 24px.</p>
+                <p class="size-em">This text is 1.5em (relative to parent).</p>
+                <p class="size-rem">This text is 1.5rem (relative to root).</p>
+                <p class="size-percent">This text is 150%.</p>
+            </div>
+
+            <div class="font-example font-weight-example">
+                <h3>Font Weight</h3>
+                <p class="weight-light">This text has font-weight: 300 (Light).</p>
+                <p class="weight-normal">This text has font-weight: 400 (Normal).</p>
+                <p class="weight-bold">This text has font-weight: 700 (Bold).</p>
+                <p class="weight-black">This text has font-weight: 900 (Black).</p>
+            </div>
+
+            <div class="font-example font-style-example">
+                <h3>Font Style</h3>
+                <p class="style-normal">This text has normal font style.</p>
+                <p class="style-italic">This text has italic font style.</p>
+                <p class="style-oblique">This text has oblique font style.</p>
+            </div>
+
+            <div class="font-example font-variant-example">
+                <h3>Font Variant</h3>
+                <p class="variant-normal">This text has normal font variant.</p>
+                <p class="variant-small-caps">This text has small-caps font variant.</p>
+            </div>
+
+            <div class="font-example font-stretch-example">
+                <h3>Font Stretch</h3>
+                <p class="stretch-condensed">This text has condensed font stretch.</p>
+                <p class="stretch-normal">This text has normal font stretch.</p>
+                <p class="stretch-expanded">This text has expanded font stretch.</p>
+            </div>
+        </div>
+
+        <!-- Combined Example -->
+        <div class="example-container">
+            <h2>Combined Example: Styled Card</h2>
+            <div class="styled-card">
+                <h3 class="card-title">Welcome to CSS Styling</h3>
+                <p class="card-text">This card demonstrates a combination of text and font properties. Notice how the title uses a bold, uppercase style with a shadow, while the body text is more readable with proper line height.</p>
+                <p class="card-footer">Learn more about web development</p>
+            </div>
+        </div>
+
+        <!-- Google Fonts Link -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    </section>
+   </main>
+
+</body>
+</html>

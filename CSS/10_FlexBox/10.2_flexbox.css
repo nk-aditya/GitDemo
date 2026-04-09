@@ -1,0 +1,504 @@
+/* ========================================
+   FLEXBOX EXAMPLES STYLES
+   ======================================== */
+
+/* Base styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #333;
+    border-bottom: 3px solid #4CAF50;
+    padding-bottom: 10px;
+}
+
+h2 {
+    color: #555;
+    margin-top: 25px;
+}
+
+h3 {
+    color: #666;
+    margin-top: 20px;
+}
+
+/* ========================================
+   FLEX CONTAINER BASE STYLES
+   ======================================== */
+/* The flex container holds flex items */
+.flex-container {
+    display: flex;  /* Enables flexbox layout */
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    min-height: 150px;
+    border: 2px solid #ccc;
+}
+
+/* Individual flex items inside the container */
+.flex-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    min-width: 80px;
+    min-height: 50px;
+}
+
+/* Different colors for variety */
+.flex-item:nth-child(1) { background-color: #FF5722; }
+.flex-item:nth-child(2) { background-color: #2196F3; }
+.flex-item:nth-child(3) { background-color: #9C27B0; }
+.flex-item:nth-child(4) { background-color: #FF9800; }
+.flex-item:nth-child(5) { background-color: #00BCD4; }
+
+/* ========================================
+   FLEX-DIRECTION EXAMPLES
+   ======================================== */
+/* 
+   flex-direction: row (default)
+   Items are placed left to right
+*/
+.flex-direction-row {
+    flex-direction: row;
+}
+
+/* 
+   flex-direction: row-reverse
+   Items are placed right to left
+*/
+.flex-direction-row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* 
+   flex-direction: column
+   Items are placed top to bottom
+*/
+.flex-direction-column {
+    flex-direction: column;
+}
+
+/* 
+   flex-direction: column-reverse
+   Items are placed bottom to top
+*/
+.flex-direction-column-reverse {
+    flex-direction: column-reverse;
+}
+
+/* ========================================
+   JUSTIFY-CONTENT EXAMPLES
+   ======================================== */
+/* 
+   justify-content: flex-start (default)
+   Items are aligned to the start of the main axis
+*/
+.justify-content-flex-start {
+    justify-content: flex-start;
+}
+
+/* 
+   justify-content: flex-end
+   Items are aligned to the end of the main axis
+*/
+.justify-content-flex-end {
+    justify-content: flex-end;
+}
+
+/* 
+   justify-content: center
+   Items are centered along the main axis
+*/
+.justify-content-center {
+    justify-content: center;
+}
+
+/* 
+   justify-content: space-between
+   First item at start, last item at end, equal space between
+*/
+.justify-content-space-between {
+    justify-content: space-between;
+}
+
+/* 
+   justify-content: space-around
+   Equal space around each item
+*/
+.justify-content-space-around {
+    justify-content: space-around;
+}
+
+/* 
+   justify-content: space-evenly
+   Equal space between all items (including edges)
+*/
+.justify-content-space-evenly {
+    justify-content: space-evenly;
+}
+
+/* ========================================
+   ALIGN-ITEMS EXAMPLES
+   ======================================== */
+/* 
+   align-items: stretch (default)
+   Items are stretched to fill the container
+*/
+.align-items-stretch {
+    align-items: stretch;
+}
+.align-items-stretch .flex-item {
+    height: auto;  /* Allow stretching */
+    min-height: 80px;
+}
+
+/* 
+   align-items: flex-start
+   Items are aligned to the start of the cross axis
+*/
+.align-items-flex-start {
+    align-items: flex-start;
+}
+
+/* 
+   align-items: flex-end
+   Items are aligned to the end of the cross axis
+*/
+.align-items-flex-end {
+    align-items: flex-end;
+}
+
+/* 
+   align-items: center
+   Items are centered along the cross axis
+*/
+.align-items-center {
+    align-items: center;
+}
+
+/* 
+   align-items: baseline
+   Items are aligned along their text baseline
+*/
+.align-items-baseline {
+    align-items: baseline;
+}
+.align-items-baseline .flex-item:nth-child(1) { padding-top: 30px; }
+.align-items-baseline .flex-item:nth-child(2) { padding-top: 10px; }
+.align-items-baseline .flex-item:nth-child(3) { padding-top: 40px; }
+
+/* ========================================
+   FLEX-WRAP EXAMPLES
+   ======================================== */
+/* 
+   flex-wrap: nowrap (default)
+   All items are forced onto one line
+*/
+.flex-wrap-nowrap {
+    flex-wrap: nowrap;
+}
+.flex-wrap-nowrap .flex-item {
+    min-width: 150px;  /* Force them to shrink */
+}
+
+/* 
+   flex-wrap: wrap
+   Items wrap onto multiple lines from top to bottom
+*/
+.flex-wrap-wrap {
+    flex-wrap: wrap;
+}
+
+/* 
+   flex-wrap: wrap-reverse
+   Items wrap onto multiple lines from bottom to top
+*/
+.flex-wrap-wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/* ========================================
+   ALIGN-CONTENT EXAMPLES
+   ======================================== */
+/* Note: align-content only works when there are multiple rows */
+.align-content-flex-start {
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+/* 
+   align-content: flex-start
+   Lines are packed at the start of the container
+*/
+.align-content-flex-end {
+    flex-wrap: wrap;
+    align-content: flex-end;
+}
+
+/* 
+   align-content: flex-end
+   Lines are packed at the end of the container
+*/
+.align-content-center {
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+/* 
+   align-content: center
+   Lines are centered in the container
+*/
+.align-content-space-between {
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+/* 
+   align-content: space-between
+   Lines are evenly distributed
+*/
+.align-content-space-around {
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+/* ========================================
+   GAP EXAMPLES
+   ======================================== */
+/* 
+   gap: shorthand for row-gap and column-gap
+   Creates space between flex items
+*/
+.gap-example {
+    display: flex;
+    gap: 20px;  /* Equal gap between all items */
+}
+
+.gap-row-column {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;    /* Gap between rows */
+    column-gap: 30px; /* Gap between columns */
+}
+
+/* ========================================
+   FLEX-FLOW EXAMPLES
+   ======================================== */
+/* 
+   flex-flow: shorthand for flex-direction and flex-wrap
+   Format: flex-direction flex-wrap
+*/
+.flex-flow-row-wrap {
+    flex-flow: row wrap;
+}
+
+.flex-flow-column-nowrap {
+    flex-flow: column nowrap;
+}
+
+.flex-flow-row-reverse-wrap-reverse {
+    flex-flow: row-reverse wrap-reverse;
+}
+
+/* ========================================
+   FLEX ITEM PROPERTIES
+   ======================================== */
+
+/* Container for item property demos */
+.item-properties-container {
+    display: flex;
+    background-color: #e0e0e0;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    min-height: 150px;
+    border: 2px solid #ccc;
+}
+
+/* 
+   order: Controls the order of flex items
+   Default is 0, can be negative or positive
+*/
+.order-example {
+    display: flex;
+}
+.order-example .flex-item:nth-child(1) { order: 3; }
+.order-example .flex-item:nth-child(2) { order: 1; }
+.order-example .flex-item:nth-child(3) { order: 4; }
+.order-example .flex-item:nth-child(4) { order: 2; }
+.order-example .flex-item:nth-child(5) { order: 5; }
+
+/* 
+   flex-grow: Defines ability to grow
+   Default is 0, positive numbers allow growth
+*/
+.flex-grow-example {
+    display: flex;
+}
+.flex-grow-example .flex-item:nth-child(1) { flex-grow: 1; }
+.flex-grow-example .flex-item:nth-child(2) { flex-grow: 2; }
+.flex-grow-example .flex-item:nth-child(3) { flex-grow: 3; }
+
+/* 
+   flex-shrink: Defines ability to shrink
+   Default is 1, 0 prevents shrinking
+*/
+.flex-shrink-example {
+    display: flex;
+}
+.flex-shrink-example .flex-item {
+    min-width: 200px;
+}
+.flex-shrink-example .flex-item:nth-child(1) { flex-shrink: 0; }  /* Won't shrink */
+.flex-shrink-example .flex-item:nth-child(2) { flex-shrink: 1; }
+.flex-shrink-example .flex-item:nth-child(3) { flex-shrink: 2; }  /* Shrinks more */
+
+/* 
+   flex-basis: Initial size before growing/shrinking
+   Can be auto, length, or percentage
+*/
+.flex-basis-example {
+    display: flex;
+}
+.flex-basis-example .flex-item:nth-child(1) { flex-basis: 100px; }
+.flex-basis-example .flex-item:nth-child(2) { flex-basis: 200px; }
+.flex-basis-example .flex-item:nth-child(3) { flex-basis: 150px; }
+
+/* 
+   flex: shorthand for flex-grow, flex-shrink, flex-basis
+   Recommended shorthand over individual properties
+*/
+.flex-shorthand-example {
+    display: flex;
+}
+.flex-shorthand-example .flex-item:nth-child(1) { flex: 1 0 100px; }  /* grow shrink basis */
+.flex-shorthand-example .flex-item:nth-child(2) { flex: 2 0 150px; }
+.flex-shorthand-example .flex-item:nth-child(3) { flex: 1 1 auto; }
+
+/* 
+   align-self: Override align-items for individual items
+   Values: auto, flex-start, flex-end, center, baseline, stretch
+*/
+.align-self-example {
+    display: flex;
+    align-items: flex-start;  /* Container default */
+    min-height: 200px;
+}
+.align-self-example .flex-item:nth-child(1) { align-self: flex-end; }
+.align-self-example .flex-item:nth-child(2) { align-self: center; }
+.align-self-example .flex-item:nth-child(3) { align-self: baseline; }
+.align-self-example .flex-item:nth-child(4) { align-self: stretch; height: auto; }
+.align-self-example .flex-item:nth-child(5) { align-self: auto; }
+
+/* ========================================
+   RESPONSIVE EXAMPLE
+   ======================================== */
+/* A practical responsive flexbox layout */
+.responsive-flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.responsive-flex .flex-item {
+    flex: 1 1 200px;  /* Grow, shrink, basis */
+    max-width: 300px;
+}
+
+/* ========================================
+   PRACTICAL LAYOUT EXAMPLES
+   ======================================== */
+
+/* Navigation bar using flexbox */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.navbar .logo {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Card layout using flexbox */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card .card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card .card-content {
+    flex-grow: 1;  /* Pushes footer to bottom */
+    margin-bottom: 15px;
+}
+
+.card .card-footer {
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+}
+
+/* Center content both horizontally and vertically */
+.center-both {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}

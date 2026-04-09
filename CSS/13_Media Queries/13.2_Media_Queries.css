@@ -1,0 +1,9 @@
+/* media query for width <=1024px or max-width:1024px */
+@media(max-width:1024px){
+    .container{
+        flex-direction: column;
+    }
+    .right{
+        width: 90%;
+    }
+}

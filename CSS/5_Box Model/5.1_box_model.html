@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <link rel="stylesheet" href="5.2_box_model.css">
+    <link rel="shortcut icon" href="/CSS/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Box Model in CSS</h1>
+        <p>The CSS box model describes the design of elements in terms of their content, padding, border, and margin.</p>
+    </header>
+    <main>
+        <section>
+            <h2>#Content</h2>
+            <p>The content area is where text and images appear. It is the innermost part of the box model.</p>
+        </section>
+        <section>
+            <h2>#Padding</h2>
+            <p>Padding is the space between the content and the border. It can be used to create space around the content.</p>
+        </section>
+        <section>
+            <h2>#Border</h2>
+            <p>The border surrounds the padding and content. It can be styled with different widths, colors, and patterns.</p>
+        </section>
+        <section>
+            <h2>#Margin</h2>
+            <p>Margin is the outermost layer of the box model. It creates space between the element and other elements on the page.</p>
+        </section>
+
+        <section>
+            <h2>#Box Model Diagram</h2>
+            <img src="data:image/png;base64,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" alt="Box Model Diagram">
+        </section>
+
+
+    </main>
+
+    <hr>
+
+    <section id="example">
+        <h1>Example: Box Model in Practice</h1>
+        <p>This section demonstrates all the Box Model properties with practical examples.</p>
+
+        <!-- Content Area Example -->
+        <div class="example-container">
+            <h2>Content Area</h2>
+            <p>The content area is the innermost part where text and images appear. Its size can be controlled using <code>width</code> and <code>height</code> properties.</p>
+            <div class="box content-example">
+                Content Area
+            </div>
+        </div>
+
+        <!-- Padding Example -->
+        <div class="example-container">
+            <h2>Padding</h2>
+            <p>Padding creates space between the content and the border. It can be set for all sides or individually.</p>
+            <div class="box padding-example">
+                Padding Example
+            </div>
+            <div class="box padding-individual">
+                <span>Top</span>
+                <span>Right</span>
+                <span>Bottom</span>
+                <span>Left</span>
+            </div>
+        </div>
+
+        <!-- Border Example -->
+        <div class="example-container">
+            <h2>Border</h2>
+            <p>The border surrounds the padding and content. It can have different styles, widths, and colors.</p>
+            <div class="box border-solid">
+                Solid Border
+            </div>
+            <div class="box border-dashed">
+                Dashed Border
+            </div>
+            <div class="box border-dotted">
+                Dotted Border
+            </div>
+            <div class="box border-radius">
+                Rounded Border
+            </div>
+        </div>
+
+        <!-- Margin Example -->
+        <div class="example-container">
+            <h2>Margin</h2>
+            <p>Margin creates space between the element and other elements. It pushes elements away from each other.</p>
+            <div class="margin-demo">
+                <div class="box margin-box">Margin Box 1</div>
+                <div class="box margin-box">Margin Box 2</div>
+                <div class="box margin-box">Margin Box 3</div>
+            </div>
+            <div class="box margin-auto">
+                Centered with Margin Auto
+            </div>
+        </div>
+
+        <!-- Box Sizing Example -->
+        <div class="example-container">
+            <h2>Box Sizing</h2>
+            <p>The <code>box-sizing</code> property controls how width and height are calculated.</p>
+            <div class="box-sizing-demo">
+                <div class="box content-box">
+                    <h3>content-box</h3>
+                    <p>Width = content only</p>
+                    <p>Total width = 250px + 20px padding + 10px border = 280px</p>
+                </div>
+                <div class="box border-box">
+                    <h3>border-box</h3>
+                    <p>Width includes padding & border</p>
+                    <p>Total width = 250px (includes everything)</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Complete Box Model Example -->
+        <div class="example-container">
+            <h2>Complete Box Model</h2>
+            <p>This example shows all box model properties together:</p>
+            <div class="box complete-example">
+                Complete Box Model Example
+            </div>
+        </div>
+
+        <!-- Inline vs Block Example -->
+        <div class="example-container">
+            <h2>Display: Inline vs Block vs Inline-Block</h2>
+            <p>Understanding how elements behave differently with display property:</p>
+            <div class="display-demo">
+                <span class="inline-box">Inline 1</span>
+                <span class="inline-box">Inline 2</span>
+                <span class="inline-box">Inline 3</span>
+            </div>
+            <div class="display-demo">
+                <div class="block-box">Block 1</div>
+                <div class="block-box">Block 2</div>
+                <div class="block-box">Block 3</div>
+            </div>
+            <div class="display-demo">
+                <span class="inline-block-box">Inline-Block 1</span>
+                <span class="inline-block-box">Inline-Block 2</span>
+                <span class="inline-block-box">Inline-Block 3</span>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>

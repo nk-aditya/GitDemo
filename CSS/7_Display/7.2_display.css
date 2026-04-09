@@ -1,0 +1,415 @@
+/* ============================================
+   CSS DISPLAY PROPERTY - Complete Reference
+   ============================================ */
+
+/* ============================================
+   GENERAL STYLES
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #2c3e50;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #34495e;
+    font-size: 24px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.8;
+}
+
+ul {
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+code {
+    background-color: #f4f4f4;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #3498db;
+    margin: 30px 0;
+}
+
+/* ============================================
+   EXAMPLE SECTION STYLES
+   ============================================ */
+
+#example {
+    padding: 20px;
+}
+
+.example-container {
+    background: #f8f9fa;
+    padding: 25px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 4px solid #3498db;
+}
+
+.example-container h2 {
+    color: #2c3e50;
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.example-container p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+/* ============================================
+   DISPLAY DEMO CONTAINER
+   ============================================ */
+
+/* 
+   The display-demo class creates a container
+   to showcase different display behaviors.
+*/
+.display-demo {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    min-height: 50px;
+}
+
+/* ============================================
+   BOX STYLES (for all examples)
+   ============================================ */
+
+/* 
+   Base box styling used across all display examples.
+   Provides consistent look for demonstration elements.
+*/
+.box {
+    /* Visual styling */
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    
+    /* Centering text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ============================================
+   DISPLAY: BLOCK
+   ============================================ */
+
+/* 
+   display: block
+   - Elements take full width available
+   - Start on a new line
+   - Can have width and height set
+   - Default block elements: div, p, h1-h6, section, etc.
+*/
+.block-element {
+    display: block;
+    width: 150px;
+    background-color: #e74c3c;
+}
+
+/* ============================================
+   DISPLAY: INLINE
+   ============================================ */
+
+/* 
+   display: inline
+   - Elements take only necessary width
+   - Allow other elements on the same line
+   - Cannot set width or height
+   - Default inline elements: span, a, strong, em, etc.
+*/
+.inline-element {
+    display: inline;
+    background-color: #27ae60;
+    padding: 15px 25px;
+}
+
+/* ============================================
+   DISPLAY: INLINE-BLOCK
+   ============================================ */
+
+/* 
+   display: inline-block
+   - Combines features of inline and block
+   - Can set width and height
+   - Still flows with text (like inline)
+   - Great for creating button-style elements
+*/
+.inline-block-element {
+    display: inline-block;
+    width: 150px;
+    background-color: #9b59b6;
+}
+
+/* ============================================
+   DISPLAY: NONE
+   ============================================ */
+
+/* 
+   display: none
+   - Element is completely removed
+   - Takes no space in the layout
+   - Element is not rendered at all
+*/
+.hidden-element {
+    display: none;
+}
+
+/* ============================================
+   DISPLAY: FLEX (Flexbox)
+   ============================================ */
+
+/* 
+   display: flex
+   - Turns element into a flex container
+   - Enables flexible layouts
+   - Items can be aligned and justified
+   - Great for one-dimensional layouts
+*/
+.flex-container {
+    display: flex;
+}
+
+/* Flex items */
+.flex-item {
+    width: 80px;
+    height: 50px;
+    background-color: #3498db;
+}
+
+/* ============================================
+   FLEX DIRECTION
+   ============================================ */
+
+/* 
+   flex-direction
+   - row (default): left to right
+   - row-reverse: right to left
+   - column: top to bottom
+   - column-reverse: bottom to top
+*/
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+/* ============================================
+   JUSTIFY CONTENT
+   ============================================ */
+
+/* 
+   justify-content
+   - Defines alignment along the main axis (horizontal)
+   - flex-start: align to the start
+   - flex-end: align to the end
+   - center: center alignment
+   - space-between: equal space between items
+   - space-around: equal space around items
+*/
+.justify-start {
+    justify-content: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+/* ============================================
+   ALIGN ITEMS
+   ============================================ */
+
+/* 
+   align-items
+   - Defines alignment along the cross axis (vertical)
+   - stretch: stretch to fill container (default)
+   - flex-start: align to the start
+   - flex-end: align to the end
+   - center: center alignment
+   - baseline: align along text baseline
+*/
+.align-start {
+    align-items: flex-start;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.align-end {
+    align-items: flex-end;
+}
+
+.align-stretch {
+    align-items: stretch;
+}
+
+/* ============================================
+   DISPLAY: GRID
+   ============================================ */
+
+/* 
+   display: grid
+   - Turns element into a grid container
+   - Enables two-dimensional layouts
+   - Rows and columns can be defined
+   - Great for complex page layouts
+*/
+.grid-container {
+    display: grid;
+}
+
+/* Grid items */
+.grid-item {
+    background-color: #e67e22;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* ============================================
+   GRID TEMPLATE COLUMNS
+   ============================================ */
+
+/* 
+   grid-template-columns
+   - Defines the number and width of columns
+   - Can use px, %, or fr (fractional units)
+*/
+.grid-cols-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid-cols-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+/* ============================================
+   GRID GAP
+   ============================================ */
+
+/* 
+   grid-gap (or gap)
+   - Defines the space between grid items
+   - Can be set for rows and columns separately
+*/
+.grid-gap {
+    gap: 15px;
+}
+
+/* ============================================
+   VISIBILITY VS DISPLAY NONE
+   ============================================ */
+
+/* 
+   visibility: hidden
+   - Element is hidden but TAKES UP SPACE
+   - The element is not visible but maintains its layout space
+   
+   display: none
+   - Element is completely removed
+   - Takes NO SPACE in the layout
+*/
+.visibility-hidden {
+    visibility: hidden;
+}
+
+.display-none {
+    display: none;
+}
+
+/* ============================================
+   ADDITIONAL DISPLAY VALUES
+   ============================================ */
+
+/* 
+   Other display values:
+   - table: behaves like a table element
+   - table-row: behaves like a tr element
+   - table-cell: behaves like a td element
+   - list-item: behaves like a li element
+   - run-in: depends on context
+*/
+
+/* Example of table display */
+.table-display {
+    display: table;
+    width: 100%;
+}
+
+.table-row {
+    display: table-row;
+}
+
+.table-cell {
+    display: table-cell;
+    padding: 10px;
+    border: 1px solid #ddd;
+}

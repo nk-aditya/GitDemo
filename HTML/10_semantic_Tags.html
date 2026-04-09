@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Tags</title>
+</head>
+<body>
+   <b>##Semantic Tags in HTML</b> <br>
+    Semantic tags in HTML are elements that clearly describe their meaning to both the browser and the developer. They provide a better structure to the webpage and improve accessibility. 
+    Some common semantic tags include: <ul>
+        <li><b>&lt;header&gt;</b>: Represents the introductory content or a set of navigational links.</li>
+        <li><b>&lt;nav&gt;</b>: Defines a section of navigation links.</li>
+        <li><b>&lt;main&gt;</b>: Represents the main content of the document.</li>
+        <li><b>&lt;article&gt;</b>: Represents a self-contained piece of content that can be independently distributed or reused.</li>
+        <li><b>&lt;section&gt;</b>: Represents a thematic grouping of content, typically with a heading.</li>
+        <li><b>&lt;aside&gt;</b>: Represents content that is tangentially related to the content around it, often used for sidebars.</li>
+        <li><b>&lt;footer&gt;</b>: Represents the footer for its nearest sectioning content or sectioning root element.</li>
+    </ul>
+    -Using semantic tags we enhances the readability of the code, improves SEO, and makes it easier for screen readers and other <br>
+    -assistive technologies to navigate the webpage. It also helps in maintaining a consistent structure across different web pages. <br>
+    -Overall, using semantic tags is a best practice in modern web development as it promotes better organization and accessibility of web content.
+
+    <br><br>
+
+    <b>##Example of Semantic Tags in HTML</b> <br>
+    <header id="header">
+        <table>
+            <tr>
+                <td><img src="https://avatars.githubusercontent.com/u/220789945?v=4" alt="Aditya's Photo" width="150"></td>
+                <td><h1>Aditya Nayak</h1>
+                    <p><i><b>Web Developer</b></i></p>
+                    <p>Passionate about building scalable web applications 🖥️</p>
+                </td>
+            </tr>
+        </table>
+     <ul>
+        <li><a href="#Education">Education</a></li>
+        <li><a href="#Experience">Experience</a></li>
+        <li><a href="#ContactWithME">Contact</a></li>
+     </ul>
+    </header>
+    <hr>
+    <main>
+        <section id="Education">
+            <h2>Education</h2>
+            <table border="1" cellpadding="3" cellspacing="0">
+                <tr>
+                    <th>Course</th>
+                    <th>University</th>
+                    <th>Year</th>
+                </tr>
+                <tr>
+                    <td>B.tech in Computer Science</td>
+                    <td>Uttrakhand Technical University</td>
+                    <td>2022 - 2026</td>
+                </tr>
+                <tr>
+                    <td>12 <sup>th</sup> </td>
+                    <td>Kendriya Vidhyalaya</td>
+                    <td>2020 - 2022</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="Experience">
+            <h2>Work Experience</h2>
+            <ul>
+                <article id="Oracle">
+                    <li>
+                        <p> <strong>Oracle</strong></p>
+                        <p><i>Software Engineer </i></p>
+                        <ul>
+                            <li>Developed and maintained web applications using JavaScript, HTML, and CSS.</li>
+                            <li>Collaborated with cross-functional teams to design and implement new features.</li>
+                            <li>Optimized application performance, resulting in a 20% increase in load speed.</li>
+                        </ul>
+                    </li>
+                </article>
+
+                <article id="Google">
+                    <li>
+                        <p><strong>Google</strong></p>
+                        <p><i>Fullstack Developer</i></p>
+                        <ul>
+                            <li>Designed and implemented RESTful APIs using Node.js and Express.</li>
+                            <li>Worked closely with frontend developers to integrate APIs with React applications.</li>
+                            <li>Participated in code reviews and contributed to improving code quality across the team.</li>
+                        </ul>
+                    </li>
+                </article>
+
+                <article id="Microsoft">
+                    <li>
+                        <p><strong>Microsoft</strong></p>
+                        <p><i>Software Developer Engineer</i></p>
+                        <ul>
+                            <li>Developed and maintained web applications using JavaScript, HTML, and CSS.</li>
+                            <li>Collaborated with cross-functional teams to design and implement new features.</li>
+                            <li>Optimized application performance, resulting in a 20% increase in load speed.</li>
+                        </ul>
+                    </li>
+                </article>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="footer">
+        <h2 id="ContactWithME">Contact with me</h2>
+        <p>Email: <a href="mailto:adityanayak@example.com">adityanayak@example.com</a></p>
+        <p>Phone: <a href="tel:+919876543210">+91 9876543210</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/adityanayak">linkedin.com/in/adityanayak</a></p>
+        <a href="#header">Back to Top</a>
+    </footer>
+
+
+</body>
+</html>

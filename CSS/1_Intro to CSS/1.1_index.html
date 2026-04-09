@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro To CSS</title>
+    <style>
+        .exampleh{
+            color: red;
+            background-color: black;
+        }
+        .examplep{
+            color: green;
+            font-size: 20px;
+        }
+        .exampleb{
+            background-color: rgb(87, 87, 139);
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/CSS/assets/favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+    <h1>Intro To CSS</h1>
+    <p>CSS stands for Cascading Style Sheets. It is used to style and layout web pages. CSS allows you to control the color, font, size, spacing, and many other aspects of the appearance of your web page.</p>
+
+    <h2>#How to Use CSS</h2>
+    <p>There are three ways to use CSS in your HTML document:</p>
+    <ol>
+        <li><strong>Inline CSS:</strong> You can add CSS directly to an HTML element using the <code>style</code> attribute.</li>
+        <li><strong>Internal CSS:</strong> You can include CSS within a <code>&lt;style&gt;</code> tag in the <code>&lt;head&gt;</code> section of your HTML document.</li>
+        <li><strong>External CSS:</strong> You can create a separate CSS file and link it to your HTML document using the <code>&lt;link&gt;</code> tag.</li>
+    </ol>
+
+    <h3>1. Internal CSS</h3>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Styled Page&lt;/title&gt;
+            &lt;style&gt;
+                body {
+                    background-color: #f0f0f0;
+                    font-family: Arial, sans-serif;
+                }
+                h1 {
+                    color: #333333;
+                }
+                p {
+                    color: #666666;
+                    font-size: 18px;
+                }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Welcome to My Styled Page&lt;/h1&gt;
+            &lt;p&gt;This is an example of how to use CSS to style a web page.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+    </pre>
+
+    <h3>2. Inline CSS</h3>
+    <pre>
+        &lt;h1 style="color: blue; font-size: 24px;"&gt;Styled Heading&lt;/h1&gt;
+        &lt;p style="color: green; font-size: 16px;"&gt;Styled Paragraph&lt;/p&gt;
+    </pre>
+
+    <h3>3. External CSS</h3>
+    <p>To use external CSS, you would create a separate CSS file (e.g., styles.css) and link it to your HTML document:</p>
+    <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html lang="en"&gt;
+        &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;title&gt;Styled Page&lt;/title&gt;
+            &lt;link rel="stylesheet" href="styles.css"&gt;   -- link by link tag to the css file
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Welcome to My Styled Page&lt;/h1&gt;
+            &lt;p&gt;This is an example of how to use external CSS to style a web page.&lt;/p&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;   
+    </pre>
+    <p>And in your styles.css file, you would include the CSS rules:</p>
+    <pre>
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: #333333;
+        }
+        p {
+            color: #666666;
+            font-size: 18px;
+        }   
+    </pre>
+
+    <h2># Example of CSS</h2>
+
+    <h3 class="exampleH">Example CSS Styles</h3>
+    <p class="examplep">Here is an example of CSS styles applied to an HTML document:</p>
+    <button class="exampleb">Submit</button>
+
+    <h2>#Favicon</h2>
+    <p>A favicon is a small icon that appears in the browser tab next to the page title.
+    <br> To add a favicon to your website, you can use the following code in the <code>&lt;head&gt;</code> section of your HTML document:</p>
+    <pre>
+    add this line to the head section of your HTML document:
+    &lt;link rel="icon" href="favicon.ico" type="image/x-icon"&gt;
+    </pre>
+
+
+
+    
+
+
+
+
+</body>
+</html>

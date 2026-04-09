@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow, Float and Clear</title>
+    <link rel="stylesheet" href="9.2_overflow_float_clear.css">
+    <link rel="shortcut icon" href="/CSS/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <section id="overflow">
+            <h2>Overflow</h2>
+            <p>The overflow property specifies what happens if content overflows an element's box.</p>
+            <p>Values:</p>
+            <ul>
+                <li><code>visible</code>: Default. Content is not clipped and may be rendered outside the element's box.</li>
+                <li><code>hidden</code>: Content is clipped and not visible outside the element's box.</li>
+                <li><code>scroll</code>: Content is clipped, but a scrollbar is added to see the rest of the content.</li>
+                <li><code>auto</code>: Content is clipped, but a scrollbar is added only if necessary to see the rest of the content.</li>
+            </ul>
+        </section>
+<hr>
+        <section id="float">
+            <h2>Float</h2>
+            <p>The float property specifies how an element should float.</p>
+            <p>Values:</p>
+            <ul>
+                <li><code>left</code>: The element floats to the left of its container.</li>
+                <li><code>right</code>: The element floats to the right of its container.</li>
+                <li><code>none</code>: Default. The element does not float.</li>
+                <li><code>inherit</code>: The element inherits the float value of its parent.</li>
+            </ul>
+        </section>
+<hr>
+        <section id="clear">
+            <h2>Clear</h2>
+            <p>The clear property specifies what elements can float beside the cleared element and on which side.</p>
+            <p>Values:</p>
+            <ul>
+                <li><code>left</code>: No floating elements allowed on the left side.</li>
+                <li><code>right</code>: No floating elements allowed on the right side.</li>
+                <li><code>both</code>: No floating elements allowed on either side.</li>
+                <li><code>none</code>: Default. Allows floating elements on both sides.</li>
+                <li><code>inherit</code>: The element inherits the clear value of its parent.</li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- ============================================
+         EXAMPLES SECTION
+         Practical demonstrations of overflow, float, and clear properties
+         ============================================ -->
+    <hr>
+    <section id="examples">
+        <h2>Examples</h2>
+
+        <!-- ============================================
+             OVERFLOW EXAMPLES
+             Demonstrates: visible, hidden, scroll, auto
+             ============================================ -->
+        <section id="overflow-examples">
+            <h3>Overflow Property Examples</h3>
+            
+            <p><strong>overflow: visible</strong> (default) - Content is not clipped and may render outside the box:</p>
+            <div class="overflow-box overflow-visible">
+                This is a box with overflow: visible. The content can spill outside the container's boundaries. Notice how this text extends beyond the box's edge. This is useful for debugging layout issues.
+            </div>
+
+            <p><strong>overflow: hidden</strong> - Content is clipped and hidden outside the box:</p>
+            <div class="overflow-box overflow-hidden">
+                This is a box with overflow: hidden. The excess content that extends beyond the container's boundaries will be completely hidden from view. You cannot scroll to see the hidden content.
+            </div>
+
+            <p><strong>overflow: scroll</strong> - Content is clipped with scrollbars to see the rest:</p>
+            <div class="overflow-box overflow-scroll">
+                This is a box with overflow: scroll. Even if all content fits, scrollbars will always be visible. Try scrolling both horizontally and vertically to see more content that would otherwise be hidden. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </div>
+
+            <p><strong>overflow: auto</strong> - Scrollbar appears only when needed:</p>
+            <div class="overflow-box overflow-auto">
+                This is a box with overflow: auto. The browser decides whether to show scrollbars. If the content fits within the box, no scrollbars appear. If content overflows, scrollbars will be added automatically. This is the most commonly used value for creating scrollable areas.
+            </div>
+        </section>
+
+        <!-- ============================================
+             FLOAT EXAMPLES
+             Demonstrates: left, right, none
+             ============================================ -->
+        <section id="float-examples">
+            <h3>Float Property Examples</h3>
+
+            <p><strong>float: left</strong> - Element floats to the left:</p>
+            <div class="float-container">
+                <div class="float-box float-left">Float Left</div>
+                <p>This text wraps around the floated element. The box is positioned on the left side of its container, and other content flows around it on the right. This is commonly used for creating image galleries and text wrapping around images.</p>
+            </div>
+
+            <p><strong>float: right</strong> - Element floats to the right:</p>
+            <div class="float-container">
+                <div class="float-box float-right">Float Right</div>
+                <p>This text wraps around the floated element. The box is positioned on the right side of its container, and other content flows around it on the left. Notice how the text starts from the left and flows around the box.</p>
+            </div>
+
+            <p><strong>Multiple floated elements</strong> - Floated elements stack next to each other:</p>
+            <div class="float-container multi-float">
+                <div class="float-box float-left">Box 1 (Left)</div>
+                <div class="float-box float-left">Box 2 (Left)</div>
+                <div class="float-box float-right">Box 3 (Right)</div>
+                <p>Multiple floated elements will stack horizontally. Elements floated left stack from left to right, while elements floated right stack from right to left.</p>
+            </div>
+        </section>
+
+        <!-- ============================================
+             CLEAR EXAMPLES
+             Demonstrates: left, right, both, none
+             ============================================ -->
+        <section id="clear-examples">
+            <h3>Clear Property Examples</h3>
+
+            <p><strong>clear: left</strong> - Element moves below left-floated elements:</p>
+            <div class="clear-container">
+                <div class="float-box float-left">Float Left 1</div>
+                <div class="float-box float-left">Float Left 2</div>
+                <div class="clear-box clear-left">Cleared (left)</div>
+                <p>This element has clear: left, so it moves below any elements floated to the left. It ignores the floated elements above and starts on a new line.</p>
+            </div>
+
+            <p><strong>clear: right</strong> - Element moves below right-floated elements:</p>
+            <div class="clear-container">
+                <div class="float-box float-right">Float Right 1</div>
+                <div class="float-box float-right">Float Right 2</div>
+                <div class="clear-box clear-right">Cleared (right)</div>
+                <p>This element has clear: right, so it moves below any elements floated to the right.</p>
+            </div>
+
+            <p><strong>clear: both</strong> - Element moves below all floated elements:</p>
+            <div class="clear-container">
+                <div class="float-box float-left">Float Left</div>
+                <div class="float-box float-right">Float Right</div>
+                <div class="clear-box clear-both">Cleared (both)</div>
+                <p>This element has clear: both, so it moves below ALL floated elements regardless of their float direction. This is the most commonly used clear value.</p>
+            </div>
+
+            <p><strong>clearfix technique</strong> - Using clear to fix parent container collapse:</p>
+            <div class="clearfix-container">
+                <div class="float-box float-left">Floated Box 1</div>
+                <div class="float-box float-left">Floated Box 2</div>
+                <!-- Clearfix: This empty element clears floats to expand the parent -->
+                <div class="clearfix"></div>
+            </div>
+            <p>Without clearing floats, the parent container would collapse (height becomes 0). The clearfix element with clear: both fixes this issue.</p>
+        </section>
+    </section>
+</body>
+</html>

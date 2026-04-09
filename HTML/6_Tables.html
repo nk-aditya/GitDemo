@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables in HtML</title>
+</head>
+<body>
+    <h2>Tables in HTML</h2>
+    <!-- <table> : Table element which declare a table  -->
+    <table border="1">  
+        <!-- <tr> : Table row element which declare a row in the table -->
+        <tr>
+            <!-- <td> : Table data element which declare a data cell in the table -->
+            <td>Alice</td> 
+            <td>30</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>25</td>
+            <td>Los Angeles</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>35</td>
+            <td>Chicago</td>
+        </tr>
+    </table>
+
+    <br>
+
+    ## Table <br>
+     `table : The main container for the table. <br>
+     `tr : Represents a table row. <br>
+     `td : Represents a table cell (data). <br>
+     `th : Represents a table header cell (used for headings). <br>
+     `border : An attribute that adds a border to the table (e.g., `border="1"`) <br>
+
+     <br>
+
+    ### Example of a Table with Headers <br>
+    <table border="1">
+        <tr>
+            <!-- <th> : Table Header Cell (Heading) -->
+            <th>Name</th> 
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>30</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>25</td>
+            <td>Los Angeles</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>35</td>
+            <td>Chicago</td>
+        </tr>
+    </table>
+
+    <br>
+
+    ### Table head, Table body, and Table footer <br>
+     `thead : Defines the header section of a table. <br>
+     `tbody : Defines the body section of a table. <br>
+     `tfoot : Defines the footer section of a table. <br>
+    <br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th> 
+                <th>Age</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Alice</td>
+                <td>30</td>
+                <td>New York</td>
+            </tr>
+            <tr>
+                <td>Bob</td>
+                <td>25</td>
+                <td>Los Angeles</td>
+            </tr>
+            <tr>
+                <td>Charlie</td>
+                <td>35</td>
+                <td>Chicago</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Table Footer</td>
+                <td>Table Footer</td>
+                <td>Table Footer</td> 
+            </tr>
+        </tfoot>
+    </table>
+
+    <br>
+
+    ### Table Caption <br>
+     `caption : Defines a caption for the table. It is typically placed above the table. <br>   
+    <table border="1">
+        <caption>Employee Information</caption>
+        <tr>
+            <th>Name</th> 
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>30</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>25</td>
+            <td>Los Angeles</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>35</td>
+            <td>Chicago</td>
+        </tr>
+    </table>
+
+    <br>
+
+    ## Col and colgroup
+     `col : Defines a column within a table and allows you to apply styles to that column. <br>
+     `colgroup : Groups one or more columns together and allows you to apply styles to the group. <br>
+    <table border="1">
+        <colgroup>
+            <col style="background-color: lightblue;">
+            <col style="background-color: lightgreen;">
+            <col style="background-color: lightyellow;">
+        </colgroup>
+        <tr>
+            <th>Name</th> 
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>30</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td>Bob</td>
+            <td>25</td>
+            <td>Los Angeles</td>
+        </tr>
+        <tr>
+            <td>Charlie</td>
+            <td>35</td>
+            <td>Chicago</td>
+        </tr>
+    </table>
+
+    <br>
+
+    ## Colspan and Rowspan <br>
+     `colspan : An attribute that allows a cell to span across multiple columns. <br>
+     `rowspan : An attribute that allows a cell to span across multiple rows. <br>
+    <table border="1">
+        <tr>
+            <th>Name</th> 
+            <th>Age</th>
+            <th>City</th>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>30</td>
+            <td>New York</td>
+        </tr>
+        <tr>
+            <td colspan="2">Bob (Age and City)</td>
+            <td>Los Angeles</td>
+        </tr>
+        <tr>
+            <td rowspan="2">Charlie (Name and Age)</td>
+            <td rowspan="2">35</td>
+            <td>Chicago</td>
+        </tr>
+        <tr>
+            <!-- Empty cell for Charlie's city -->
+            <td></td>
+        </tr>
+    </table>
+
+    <br>
+
+    ### Summary <br>
+     - Tables are used to display data in a structured format. <br>
+     - The main elements of a table include `table`, `tr`, `td`, and `th`. <br>
+     - Additional elements like `thead`, `tbody`, `tfoot`, and `caption` help organize the table content. <br>
+     - Attributes like `border`, `colspan`, and `rowspan` allow for customization of the table's appearance and structure. <br>
+     <br>
+
+
+        
+     
+
+
+
+    
+</body>
+</html>

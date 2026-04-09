@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position in CSS</title>
+    <link rel="stylesheet" href="8.2_position.css">
+    <link rel="shortcut icon" href="/CSS/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <section id="positionTheory">
+            <h1>Position in CSS</h1>
+            <p>In CSS, the <code>position</code> property specifies how an element is positioned in a document. It can take several values, including:</p>
+            <ul>
+                <li><code>static</code>: The default value. The element is positioned according to the normal flow of the document.</li>
+                <li><code>relative</code>: The element is positioned relative to its normal position. You can use the <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties to adjust its position.</li>
+                <li><code>absolute</code>: The element is positioned relative to its nearest positioned ancestor (not static). If there is no such ancestor, it will be positioned relative to the initial containing block (usually the viewport).</li>
+                <li><code>fixed</code>: The element is positioned relative to the viewport, which means it stays in the same place even when the page is scrolled.</li>
+                <code>sticky</code>: The element is treated as relative until it crosses a specified threshold, at which point it becomes fixed.</li>
+            </ul>
+
+            <h2>#Static Position</h2>
+            <p>Elements with <code>position: static</code> are positioned according to the normal flow of the document. They are not affected by the <code>top</code>, <code>right</code>, <code>bottom</code>, or <code>left</code> properties.</p>
+            <p>Example :</p>
+            <pre>
+                div.static {
+                    position: static;
+                    border: 3px solid #73AD21;
+                }
+            </pre>
+
+            <h2>#Relative Position</h2>
+            <p>Elements with <code>position: relative</code> are positioned relative to their normal position. You can use the <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties to adjust their position.</p>
+            <p>Example :</p>
+            <pre>                
+                div.relative {
+                    position: relative;
+                    top: 30px;
+                    left: 30px;
+                    border: 3px solid #73AD21;
+                }
+            </pre>
+
+            <h2>#Absolute Position</h2>
+            <p>Elements with <code>position: absolute</code> are positioned relative to their nearest positioned ancestor (not static). If there is no such ancestor, they will be positioned relative to the initial containing block (usually the viewport).</p>
+            <p>Example :</p>    
+            <pre>
+                div.absolute {
+                    position: absolute;
+                    top: 30px;
+                    left: 30px;
+                    border: 3px solid #73AD21;
+                }
+            </pre>
+
+            <h2>#Fixed Position</h2>
+            <p>Elements with <code>position: fixed</code> are positioned relative to the viewport, which means they stay in the same place even when the page is scrolled.</p>
+            <p>Example :</p>
+            <pre>
+                div.fixed {
+                    position: fixed;
+                    top: 30px;
+                    left: 30px;
+                    border: 3px solid #73AD21;
+                }
+            </pre>
+
+            <h2>#Sticky Position</h2>
+            <p>Elements with <code>position: sticky</code> are treated as relative until they cross a specified threshold, at which point they become fixed.</p>
+            <p>Example :</p>
+            <pre>
+                div.sticky {
+                    position: sticky;
+                    top: 30px;
+                    border: 3px solid #73AD21;
+                }
+            </pre>
+
+            <div id="offsetproperties">
+                <h2>#Offset Properties</h2>
+                <p>The <code>top</code>, <code>right</code>, <code>bottom</code>, and <code>left</code> properties specify the offset of a positioned element. They only work on elements that have a position value other than <code>static</code>.</p>
+                <p>Example :</p>
+                <pre>
+                    div.offset {
+                        position: relative;
+                        top: 20px;
+                        left: 20px;
+                        border: 3px solid #73AD21;
+                    }
+                </pre>
+            </div>
+
+            <div id="z-index">
+                <h2>#Z-Index</h2>
+                <p>The <code>z-index</code> property specifies the stack order of positioned elements. Elements with a higher <code>z-index</code> will be in front of elements with a lower <code>z-index</code>.</p>
+                <p>Example :</p>
+                <pre>
+                    div.z-index {
+                        position: relative;
+                        z-index: 1; /* This element will be behind the one with z-index: 2 */
+                    }
+                    div.z-index-2 {
+                        position: relative;
+                        z-index: 2; /* This element will be in front of the one with z-index: 1 */
+                    }
+                </pre>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="example">
+            <h1>Example: Position in Practice</h1>
+            <p>This section demonstrates all the Position properties with practical examples.</p>
+
+            <div class="example-container">
+                <h2>Position: Static</h2>
+                <p>Static is the default position.</p>
+                <div class="position-demo">
+                    <div class="box static-box">Static Box</div>
+                    <div class="box static-box">Static Box</div>
+                    <div class="box static-box">Static Box</div>
+                </div>
+            </div>
+
+            <div class="example-container">
+                <h2>Position: Relative</h2>
+                <p>Relative positioning moves element relative to its normal position.</p>
+                <div class="position-demo">
+                    <div class="box">Normal</div>
+                    <div class="box relative-box">Relative</div>
+                    <div class="box">Normal</div>
+                </div>
+            </div>
+
+            <div class="example-container">
+                <h2>Position: Absolute</h2>
+                <p>Absolute positioning relative to positioned ancestor.</p>
+                <div class="position-demo-absolute">
+                    <div class="parent-box">
+                        <p>Parent</p>
+                        <div class="box absolute-box">Absolute</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="example-container">
+                <h2>Position: Fixed</h2>
+                <p>Fixed positioning relative to viewport.</p>
+                <div class="position-demo">
+                    <div class="box">Normal</div>
+                    <div class="box fixed-box">Fixed</div>
+                    <div class="box">Normal</div>
+                </div>
+            </div>
+
+            <div class="example-container">
+                <h2>Position: Sticky</h2>
+                <p>Sticky acts like relative until threshold is reached.</p>
+                <div class="position-demo">
+                    <div class="box">Box 1</div>
+                    <div class="box sticky-box">Sticky</div>
+                    <div class="box">Box 3</div>
+                </div>
+            </div>
+
+            <div class="example-container">
+                <h2>Z-Index</h2>
+                <p>z-index controls stacking order.</p>
+                <div class="position-demo">
+                    <div class="box z-index-1">z:1</div>
+                    <div class="box z-index-2">z:2</div>
+                    <div class="box z-index-3">z:3</div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
