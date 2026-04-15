@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Variables</title>
+    <link rel="stylesheet" href="14.2_variables.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>CSS Variables</h1>
+        <p>CSS variables, also known as custom properties, allow you to store values that can be reused throughout your CSS. They are defined using the <code>--</code> prefix and can be accessed using the <code>var()</code> function.</p>
+        <br>
+        <h2>Defining a CSS Variable</h2>
+        <p>You can define a CSS variable within a selector. For example:</p>
+        <pre><code>:root {--primary-color: #3498db;}</code></pre>
+
+        <br>
+
+        <h2>Using a CSS Variable</h2>
+        <p>To use a CSS variable, you can call it with the <code>var()</code> function. For example:</p>
+        <pre><code>body {background-color: var(--primary-color);}</code></pre>
+
+        <br>
+
+        <h2>Fallback Values</h2>
+        <p>You can also provide a fallback value in case the variable is not defined. For example:</p>
+        <pre><code>body {background-color: var(--primary-color, #2980b9);}</code></pre>
+
+        <br>
+
+        <h2>Scope of CSS Variables</h2>
+        <p>CSS variables are scoped to the element they are defined on and its descendants. This means that if you define a variable on the <code>:root</code> selector, it will be available globally throughout your CSS.</p>
+        
+        <p style="text-align: center; font-style: italic; color: var(--text-light); margin-top: var(--spacing-lg);">
+          Now let's see CSS Variables in action with real-world examples below!
+        </p>    
+
+    </div>
+
+    <!-- NEW: Real-world Examples Container -->
+    <div class="examples-container">
+      
+      <!-- Example 1: Theme Toggle (Color System) -->
+      <section>
+        <h3>🌙 1. Dynamic Theme System (Color Variables)</h3>
+        <p>
+          CSS variables make theming easy. Define color variables in <code>:root</code> and override them for dark mode.
+          Click the toggle button to see the magic! All colors update instantly using <code>var(--color-name)</code>.
+        </p>
+        <div class="demo">
+          <button class="theme-toggle" onclick="toggleTheme()">Toggle Dark/Light Mode</button>
+          <div style="margin-top: var(--spacing-md); padding: var(--spacing-md); background: var(--surface-color); border-radius: var(--border-radius-md);">
+            <p>This entire page uses CSS variables for colors. Notice how <strong>everything</strong> changes smoothly!</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 2: Spacing System -->
+      <section>
+        <h3>📏 2. Consistent Spacing System</h3>
+        <p>
+          Define spacing tokens (<code>--spacing-sm</code>, <code>--spacing-md</code>, etc.) and reuse everywhere.
+          This creates visual consistency across your design system.
+        </p>
+        <div class="demo spacing-demo">
+          <div class="spacing-card">XS Spacing<br><small>var(--spacing-xs)</small></div>
+          <div class="spacing-card">SM Spacing<br><small>var(--spacing-sm)</small></div>
+          <div class="spacing-card">MD Spacing<br><small>var(--spacing-md)</small></div>
+          <div class="spacing-card">LG Spacing<br><small>var(--spacing-lg)</small></div>
+          <div class="spacing-card">XL Spacing<br><small>var(--spacing-xl)</small></div>
+        </div>
+      </section>
+
+      <!-- Example 3: Typography Scale -->
+      <section>
+        <h3>🔤 3. Responsive Typography Scale</h3>
+        <p>
+          Create a modular font-size scale. Easy to adjust globally or responsively via media queries.
+        </p>
+        <div class="demo typography-demo">
+          <div>
+            <h1>XXL Heading (var(--font-size-xxl))</h1>
+            <h2>XL Heading (var(--font-size-xl))</h2>
+            <p>Large text (var(--font-size-lg))</p>
+            <p>Base text (var(--font-size-base))</p>
+            <span class="small">Small text (var(--font-size-sm))</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Example 4: Component Library -->
+      <section>
+        <h3>🧱 4. Reusable Component Library</h3>
+        <p>
+          Build buttons, cards, nav with consistent variables. Easy to maintain and restyle globally.
+        </p>
+        <div class="demo component-demo">
+          <!-- Buttons -->
+          <div>
+            <h4>Button Variants:</h4>
+            <a href="#" class="btn btn-primary">Primary</a>
+            <a href="#" class="btn btn-secondary">Secondary</a>
+            <a href="#" class="btn btn-danger">Danger</a>
+          </div>
+          
+          <!-- Card -->
+          <div class="demo-card">
+            <h4>Product Card</h4>
+            <p>Consistent padding: var(--spacing-md), radius: var(--border-radius-lg)</p>
+            <a href="#" class="btn btn-primary">Buy Now</a>
+          </div>
+          
+          <!-- Navigation -->
+          <div class="demo-nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <script>
+      // Simple JS to demonstrate theme toggle using CSS variables
+      function toggleTheme() {
+        document.documentElement.classList.toggle('dark');
+      }
+      
+      // Set initial theme based on preference
+      if (localStorage.getItem('theme') === 'dark' || 
+          (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      }
+      
+      // Listen for changes and save preference
+      document.documentElement.addEventListener('change', function() {
+        if (document.documentElement.classList.contains('dark')) {
+          localStorage.setItem('theme', 'dark');
+        } else {
+          localStorage.setItem('theme', 'light');
+        }
+      });
+    </script>
+  </body>
+</html>
