@@ -1,0 +1,326 @@
+/* ========================================
+   CSS TRANSFORMS COMPLETE TUTORIAL STYLES
+   ======================================== */
+
+/* Global Reset and Body Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Explanation Section Styles */
+.Explanation {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.Explanation h1 {
+  color: #4a5568;
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2.5em;
+}
+
+.Explanation h2 {
+  color: #2d3748;
+  margin: 25px 0 15px;
+  border-bottom: 3px solid #667eea;
+  padding-bottom: 10px;
+}
+
+.Explanation p {
+  margin-bottom: 15px;
+  font-size: 1.1em;
+}
+
+.Explanation ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.Explanation li {
+  background: #f7fafc;
+  margin: 10px 0;
+  padding: 15px;
+  border-left: 5px solid #667eea;
+  border-radius: 5px;
+}
+
+.Explanation pre code {
+  background: #2d3748;
+  color: #a0aec0;
+  padding: 20px;
+  border-radius: 8px;
+  display: block;
+  overflow-x: auto;
+  font-size: 0.95em;
+}
+
+/* Examples Section - Grid Layout */
+.examples {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.examples h2 {
+  color: #2d3748;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 2.2em;
+  border-bottom: 3px solid #48bb78;
+  padding-bottom: 10px;
+}
+
+.examples > div {
+  margin-bottom: 50px;
+  padding: 20px;
+  background: #f8f9ff;
+  border-radius: 10px;
+  border-left: 6px solid #48bb78;
+}
+
+.demo-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.demo-item {
+  text-align: center;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* ========================================
+   BASE DEMO BOX STYLES
+   All demos use smooth transition for interactivity
+   ======================================== */
+.demo-box {
+  width: 120px;
+  height: 120px;
+  margin: 20px auto;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+  border-radius: 12px;
+  border: 3px solid #fff;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  cursor: pointer;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.demo-box:hover {
+  box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+/* ========================================
+   1. TRANSLATE - Moves element (real-world: slide menus, notifications)
+   Syntax: translate(x, y) | translateX() | translateY() | translate3d()
+   ======================================== */
+.demo-translate:hover {
+  transform: translate(30px, 20px);
+}
+
+.demo-translateX:hover {
+  transform: translateX(50px);
+}
+
+.demo-translateY:hover {
+  transform: translateY(-30px);
+}
+
+/* 3D Translate */
+.demo-translate3d {
+  transform: perspective(500px) translateZ(50px);
+}
+
+/* ========================================
+   2. ROTATE - Rotates element (real-world: loading spinners, flip cards)
+   Syntax: rotate(angle) | rotateX() | rotateY() | rotate3d()
+   ======================================== */
+.demo-rotate:hover {
+  transform: rotate(180deg);
+}
+
+.demo-rotateX:hover {
+  transform: rotateX(45deg);
+}
+
+.demo-flip-card {
+  perspective: 1000px;
+  height: 150px;
+  margin: 20px auto;
+}
+
+.demo-flip-card-inner {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
+
+.demo-flip-card:hover .demo-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.demo-flip-card-front, .demo-flip-card-back {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: white;
+}
+
+.demo-flip-card-front {
+  background: linear-gradient(45deg, #ff9ff3, #f368e0);
+}
+
+.demo-flip-card-back {
+  background: linear-gradient(45deg, #54a0ff, #2e86de);
+  transform: rotateY(180deg);
+}
+
+/* ========================================
+   3. SCALE - Resizes element (real-world: zoom buttons, hover effects)
+   Syntax: scale(x,y) | scaleX() | scaleY()
+   ======================================== */
+.demo-scale:hover {
+  transform: scale(1.5);
+}
+
+.demo-scaleX:hover {
+  transform: scaleX(2);
+}
+
+.demo-scaleY:hover {
+  transform: scaleY(0.5);
+}
+
+/* ========================================
+   4. SKEW - Distorts element (real-world: creative typography, buttons)
+   Syntax: skew(x,y)
+   ======================================== */
+.demo-skew:hover {
+  transform: skew(20deg, 5deg);
+}
+
+.demo-skewX:hover {
+  transform: skewX(25deg);
+}
+
+/* ========================================
+   5. MATRIX - Mathematical transform (real-world: custom complex effects)
+   ======================================== */
+.demo-matrix:hover {
+  transform: matrix(1, 0.3, 0, 1, 0, 0); /* skew-like effect */
+}
+
+/* ========================================
+   6. TRANSFORM-ORIGIN & PERSPECTIVE
+   Changes rotation/scale center (default: center center)
+   ======================================== */
+.demo-origin {
+  transform-origin: bottom right;
+}
+
+.demo-origin:hover {
+  transform: rotate(45deg) scale(1.2);
+}
+
+.perspective-container {
+  perspective: 800px;
+  height: 150px;
+}
+
+.demo-perspective {
+  transform: rotateY(30deg);
+}
+
+/* ========================================
+   7. REAL-WORLD COMBINED EXAMPLE: Navigation Menu Slide + Scale
+   ======================================== */
+.nav-demo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.nav-item {
+  padding: 12px 24px;
+  background: linear-gradient(45deg, #00b894, #00cec9);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  transform: translateX(0);
+  font-weight: 500;
+}
+
+.nav-item:hover {
+  transform: translateX(10px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,184,148,0.4);
+}
+
+.button-skew {
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #fdcb6e, #e17055);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin: 10px;
+}
+
+.button-skew:hover {
+  transform: skew(-10deg) scale(1.1);
+  box-shadow: 0 10px 30px rgba(225,112,85,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .demo-group {
+    grid-template-columns: 1fr;
+  }
+  
+  body {
+    padding: 10px;
+  }
+}
+
