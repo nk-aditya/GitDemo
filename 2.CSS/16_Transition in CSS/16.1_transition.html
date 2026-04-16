@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition in CSS</title>
+    <link rel="stylesheet" href="16.2_transition.css">
+    <link rel="shortcut icon" href="/2.CSS/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <div class="explanation">
+        <h1>Transition in CSS</h1>
+        <p>Transition in CSS allows you to create smooth animations when changing CSS properties. It enables you to specify the duration, timing function, and delay for the transition effect.</p>
+        <h2>Basic Syntax</h2>
+        <pre><code>/* Syntax for transition */selector {transition: property duration timing-function delay;}</code></pre>
+        <p>Where:</p>
+        <ul>
+            <li><strong>property</strong>: The CSS property you want to animate (e.g., width, height, background-color).</li>
+            <li><strong>duration</strong>: The time it takes for the transition to complete (e.g., 0.5s, 1s).</li>
+            <li><strong>timing-function</strong>: The speed curve of the transition (e.g., ease, linear, ease-in, ease-out).</li>
+            <li><strong>delay</strong>: The time to wait before starting the transition (e.g., 0s, 0.5s).</li>
+        </ul>
+        <h2>Example</h2>
+        <p>Here’s an example of a simple transition effect on a button:</p>
+        <pre><code>.button {
+            background-color: blue;
+            color: white;
+            padding: 10px 20px;
+            transition: background-color 0.5s ease;
+        }
+        .button:hover {
+            background-color: red;
+        }</code></pre>
+
+        <p>In this example, when you hover over the button, the background color will transition smoothly from blue to red over 0.5 seconds using the 'ease' timing function.</p>
+
+        <h2>Multiple Transitions</h2>
+        <p>You can also specify multiple properties to transition at once:</p>
+        <pre><code>.box {
+            width: 100px;
+            height: 100px;
+            background-color: green;    
+            transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+        }
+        .box:hover {
+            width: 150px;
+            height: 150px;
+            background-color: yellow;
+        }</code></pre>
+        <p>In this example, when you hover over the box, it will transition its width, height, and background color simultaneously.</p>
+
+        <h2>Transition Shorthand</h2>
+        <p>You can also use the shorthand property to specify all transition properties in one line:</p>
+        <pre><code>.box {
+            transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease;
+        }</code></pre>
+        <p>Alternatively, you can use the shorthand syntax to specify all properties at once:</p>
+        <pre><code>.box {
+            transition: all 0.5s ease;
+        }</code></pre>
+        <p>In this case, all properties that change will transition smoothly over 0.5 seconds using the 'ease' timing function.</p>
+
+        /* Note: The transition property only works on properties that can be animated. Some properties, like display, cannot be transitioned. Always check the documentation for the specific properties you want to animate. */   
+
+        <h2>Conclusion</h2>
+        <p>CSS transitions are a powerful tool for creating smooth animations and enhancing user experience on websites. By understanding how to use the transition property effectively, you can create engaging and visually appealing interfaces.</p>
+
+        h2>References</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition">MDN Web Docs: CSS Transitions</a></li>
+            <li><a href="https://www.w3schools.com/css/css3_transitions.asp">W3Schools: CSS Transitions</a></li>
+        </ul>   
+
+    </div>
+
+    <!-- Practical Examples Section -->
+    <div class="practical-examples">
+        <h1>Interactive Real-World Demos (Hover Each!)</h1>
+        <p>Real-world uses: Button hovers, menu expansions, card flips, image zooms.</p>
+
+        <section class="demo-section">
+            <h2>1. Single Property (Color Change - Login Button)</h2>
+            <div class="demo-box demo-property">
+                <span>Hover for smooth color shift →</span>
+                <div class="example-btn property-demo">Login</div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>2. Duration Variations (Fast vs Slow - Loading Indicators)</h2>
+            <div class="demo-box">
+                <span>Fast (0.2s):</span>
+                <div class="example-box duration-fast">Fast</div>
+            </div>
+            <div class="demo-box">
+                <span>Slow (2s):</span>
+                <div class="example-box duration-slow">Slow</div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>3. Timing Functions (Motion Curves - UI Feedback)</h2>
+            <div class="demo-grid">
+                <div class="demo-box">
+                    <span>ease (natural)</span>
+                    <div class="example-box timing-ease">ease</div>
+                </div>
+                <div class="demo-box">
+                    <span>linear (constant)</span>
+                    <div class="example-box timing-linear">linear</div>
+                </div>
+                <div class="demo-box">
+                    <span>ease-in-out (smooth)</span>
+                    <div class="example-box timing-ease-in-out">ease-in-out</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>4. Delay (Staggered Effects - Menu Items)</h2>
+            <div class="demo-box">
+                <span>No delay:</span>
+                <div class="example-box delay-none">Immediate</div>
+            </div>
+            <div class="demo-box">
+                <span>0.5s delay:</span>
+                <div class="example-box delay-05">Delayed</div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>5. Multiple Properties (Scale + Color - Image Card)</h2>
+            <div class="demo-box">
+                <span>Hover: width, height, color change together</span>
+                <div class="example-card multiple-demo">
+                    <span>Card</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="demo-section">
+            <h2>6. Shorthand 'all' (Full Transform - Navigation Toggle)</h2>
+            <div class="demo-box">
+                <span>All properties animate</span>
+                <div class="example-nav all-demo">☰ Menu</div>
+            </div>
+        </section>
+
+        <h2>References</h2>
+        <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition" target="_blank">MDN: CSS Transitions</a></li>
+            <li><a href="https://css-tricks.com/almanac/properties/t/transitions/" target="_blank">CSS-Tricks Guide</a></li>
+        </ul>
+    </div>
+</body>
+</html>
