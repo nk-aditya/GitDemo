@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ========================================
+   GENERAL STYLES FOR LAYOUT & TYPOGRAPHY
+   ======================================== */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.explanation {
+    background: white;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.explanation h1 {
+    color: #4a5568;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.explanation h2 {
+    color: #2d3748;
+    margin-top: 25px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.explanation pre {
+    background: #f7fafc;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 15px 0;
+    border-left: 5px solid #667eea;
+}
+
+.demos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.demo-section {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.demo-section h3 {
+    color: #2d3748;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.demo-container {
+    width: 100%;
+    height: 200px;
+    border: 3px dashed #cbd5e0;
+    border-radius: 12px;
+    position: relative;
+    margin: 20px 0;
+    overflow: hidden;
+    background: #f7fafc;
+}
+
+.demo-element {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.control-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin: 5px;
+    transition: background 0.3s;
+}
+
+.control-btn:hover {
+    background: #764ba2;
+}
+
+.demo-code {
+    background: #2d3748;
+    color: #a0aec0;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-top: 15px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+/* ========================================
+   @KEYFRAMES DEFINITIONS - BASIC CONCEPTS
+   ======================================== */
+
+/* Demo 1: Basic from/to keyframes - changes position */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Demo 2: Percentage-based multi-step keyframes - bounce effect */
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-100px); }
+    70% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+
+/* Demo 3: Rotation animation */
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Demo 4: Pulse (scale) effect */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+/* Demo 5: Fade in/out */
+@keyframes fade {
+    0% { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+/* Demo 6: Complex color and position shift */
+@keyframes colorShift {
+    0% { background: red; transform: translateX(0); }
+    25% { background: yellow; transform: translateX(50px); }
+    50% { background: green; transform: translateY(-50px); }
+    75% { background: blue; transform: translateX(50px); }
+    100% { background: purple; transform: translateX(0); }
+}
+
+/* ========================================
+   ANIMATION PROPERTY DEMOS
+   Each class demonstrates one specific animation property
+   ======================================== */
+
+/* 1. animation-duration: Controls how long the animation takes */
+.duration-demo {
+    animation: slideIn 3s ease-in-out infinite;
+    .fill-forwards { animation-fill-mode: forwards; }
+}
+
+/* 2. animation-timing-function: Different easing effects */
+.linear-demo { animation: bounce 2s linear infinite; }
+.ease-demo { animation: bounce 2s ease infinite; }
+.cubic-demo { animation: bounce 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) infinite; }
+
+/* 3. animation-delay: Delay before animation starts */
+.delay-demo {
+    animation: rotate 2s linear infinite;
+    animation-delay: 1s;
+}
+
+/* 4. animation-iteration-count: How many times to repeat */
+.iterate-demo {
+    animation: pulse 1s ease-in-out 5; /* 5 times */
+}
+.infinite-demo {
+    animation: pulse 1s ease-in-out infinite;
+}
+
+/* 5. animation-direction: Direction of playback */
+.normal-demo { animation: bounce 2s ease-in-out infinite; }
+.reverse-demo { animation: bounce 2s ease-in-out reverse infinite; }
+.alternate-demo { animation: bounce 2s ease-in-out alternate infinite; }
+
+/* 6. animation-fill-mode: State before/after animation */
+.fill-forwards { animation: slideIn 2s ease-out forwards; }
+.fill-backwards { animation: slideIn 2s ease-out backwards; }
+
+/* 7. animation-play-state: Pause/resume (controlled by hover) */
+.pause-demo {
+    animation: rotate 2s linear infinite;
+    animation-play-state: paused;
+}
+.pause-demo:hover {
+    animation-play-state: running;
+}
+
+/* Demo section specific animations */
+.slide-demo { animation: slideIn 2s ease-out forwards; animation-iteration-count: infinite;}
+.bounce-demo { animation: bounce 2s ease-in-out infinite; }
+.rotate-demo { animation: rotate 4s linear infinite; }
+.pulse-demo { animation: pulse 1.5s ease-in-out infinite; }
+.fade-demo { animation: fade 3s ease-in-out infinite; }
+.colorshift-demo { animation: colorShift 4s ease-in-out infinite; }
+
+@media (max-width: 768px) {
+    .demos {
+        grid-template-columns: 1fr;
+    }
+}
+

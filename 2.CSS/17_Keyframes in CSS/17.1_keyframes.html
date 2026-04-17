@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes in CSS</title>
+    <link rel="stylesheet" href="17.2_keyframes.css">
+    <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <div class="explanation">
+        <h1>Keyframes in CSS</h1>
+        <p>Keyframes in CSS allow you to create animations by defining specific points in the animation sequence. You can specify the styles at these key points, and the browser will interpolate the styles between them to create smooth animations.</p>
+        <p>To create a keyframe animation, you use the @keyframes rule to define the animation sequence. You can specify the percentage of the animation duration at which each keyframe occurs, or you can use keywords like 'from' and 'to' for the start and end of the animation.</p>
+        <p>Here's an example of how to define a simple keyframe animation that changes the background color of an element:</p>
+        <pre>@keyframes changeColor {
+            from {
+                background-color: red;
+            }
+            to {
+                background-color: blue;
+            }
+        }</pre>
+
+        <p>In this example, the animation named 'changeColor' will transition the background color from red to blue. You can then apply this animation to an element using the 'animation' property:</p>
+        <pre>.my-element {
+            animation: changeColor 2s infinite;
+        }</pre>
+
+        <p>This will apply the 'changeColor' animation to elements with the class 'my-element', making the background color transition from red to blue over a duration of 2 seconds, and it will repeat indefinitely.</p>
+        
+        <!-- REMAINING CONCEPTS: Percentage-based Keyframes -->
+        <h2>Percentage-Based Keyframes</h2>
+        <p>Instead of just <code>from/to</code>, you can use percentages (0% to 100%) for more control:</p>
+        <pre>@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-30px); }
+  100% { transform: translateY(0); }
+}</pre>
+
+        <!-- ANIMATION PROPERTIES -->
+        <h2>Animation Properties</h2>
+        <p>The <code>animation</code> shorthand combines these properties:</p>
+        
+        <h3>1. animation-duration</h3>
+        <p>Sets how long the animation lasts (e.g., 2s, 500ms):</p>
+        <pre>.box {
+  animation: bounce 2s infinite;
+}</pre>
+
+        <h3>2. animation-timing-function</h3>
+        <p>Controls acceleration (ease, linear, ease-in-out, cubic-bezier()):</p>
+        <pre>.box {
+  animation-timing-function: ease-in-out;
+}</pre>
+
+        <h3>3. animation-delay</h3>
+        <p>Delay before start:</p>
+        <pre>.box {
+  animation-delay: 1s;
+}</pre>
+
+        <h3>4. animation-iteration-count</h3>
+        <p>Number of repeats (n or infinite):</p>
+        <pre>.box {
+  animation-iteration-count: infinite;
+}</pre>
+
+        <h3>5. animation-direction</h3>
+        <p>Direction (normal, reverse, alternate, alternate-reverse):</p>
+        <pre>.box {
+  animation-direction: alternate;
+}</pre>
+
+        <h3>6. animation-fill-mode</h3>
+        <p>Styles before/after (none, forwards, backwards, both):</p>
+        <pre>.box {
+  animation-fill-mode: forwards;
+}</pre>
+
+        <h3>7. animation-play-state</h3>
+        <p>running or paused (great for hover):</p>
+        <pre>.box {
+  animation-play-state: paused;
+}
+.box:hover {
+  animation-play-state: running;
+}</pre>
+    </div>
+
+    <!-- PRACTICAL DEMONSTRATIONS -->
+    <div class="demos">
+        <!-- Demo 1: Basic Slide In (from/to) -->
+        <div class="demo-section">
+            <h3>🎬 Basic from/to Keyframes</h3>
+            <p>Simple slide-in animation using from/to.</p>
+            <div class="demo-container">
+                <div class="demo-element slide-demo">Slide</div>
+            </div>
+            <pre class="demo-code">@keyframes slideIn {
+  from { transform: translateX(-100); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+.slide-demo { animation: slideIn 2s ease-out forwards; }</pre>
+        </div>
+
+        <!-- Demo 2: Bounce (Percentage keyframes) -->
+        <div class="demo-section">
+            <h3>🏀 Bounce with % Keyframes</h3>
+            <p>Multi-step bounce using percentages.</p>
+            <div class="demo-container">
+                <div class="demo-element bounce-demo">Bounce</div>
+            </div>
+            <pre class="demo-code">@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-100px); }
+  100% { transform: translateY(0); }
+}
+.bounce-demo { animation: bounce 2s infinite; }</pre>
+        </div>
+
+        <!-- Demo 3: Rotate -->
+        <div class="demo-section">
+            <h3>🔄 Continuous Rotation</h3>
+            <p>360° spinner with infinite iteration.</p>
+            <div class="demo-container pause-control">
+                <div class="demo-element rotate-demo pause-demo">Rotate</div>
+            </div>
+            <button class="control-btn" onclick="this.parentElement.querySelector('.pause-demo').style.animationPlayState='running'">Play</button>
+            <button class="control-btn" onclick="this.parentElement.querySelector('.pause-demo').style.animationPlayState='paused'">Pause</button>
+            <pre class="demo-code">.rotate-demo { animation: rotate 4s linear infinite; }
+.pause-demo:hover { animation-play-state: running; }</pre>
+        </div>
+
+        <!-- Demo 4: Pulse -->
+        <div class="demo-section">
+            <h3>💓 Pulse Effect</h3>
+            <p>Scale animation with different iterations.</p>
+            <div class="demo-container">
+                <div class="demo-element pulse-demo infinite-demo">Infinite</div>
+                <div class="demo-element pulse-demo iterate-demo" style="animation-delay: 0.5s;">5x</div>
+            </div>
+            <pre class="demo-code">.infinite-demo { animation: pulse 1.5s infinite; }
+.iterate-demo { animation: pulse 1s 5; }</pre>
+        </div>
+
+        <!-- Demo 5: Timing Functions -->
+        <div class="demo-section">
+            <h3>⚡ Timing Functions Comparison</h3>
+            <p>Linear vs Ease vs Custom cubic-bezier.</p>
+            <div class="demo-container" style="height: 250px; display: flex; gap: 20px; align-items: flex-end;">
+                <div class="demo-element linear-demo" style="animation-duration: 2s;">Linear</div>
+                <div class="demo-element ease-demo" style="animation-duration: 2s;">Ease</div>
+                <div class="demo-element cubic-demo" style="animation-duration: 2s;">Bounce</div>
+            </div>
+            <pre class="demo-code">.linear-demo { animation-timing-function: linear; }
+.ease-demo { animation-timing-function: ease; }
+.cubic-demo { animation-timing-function: cubic-bezier(0.68,-0.55,0.265,1.55); }</pre>
+        </div>
+
+        <!-- Demo 6: Direction Variations -->
+        <div class="demo-section">
+            <h3>↕️ Direction: Normal/Reverse/Alternate</h3>
+            <p>Different playback directions.</p>
+            <div class="demo-container" style="display: flex; gap: 20px; height: auto;">
+                <div style="flex:1;"><div class="demo-element normal-demo" style="animation-duration: 2s; width:100%; height:40px; border-radius: 10px; margin:20px auto; display:block;">Normal</div></div>
+                <div style="flex:1;"><div class="demo-element reverse-demo" style="animation-duration: 2s; width:100%; height:40px; border-radius: 10px; margin:20px auto; display:block;">Reverse</div></div>
+                <div style="flex:1;"><div class="demo-element alternate-demo" style="animation-duration: 2s; width:100%; height:40px; border-radius: 10px; margin:20px auto; display:block;">Alternate</div></div>
+            </div>
+            <pre class="demo-code">.normal-demo { animation-direction: normal; }
+.reverse-demo { animation-direction: reverse; }
+.alternate-demo { animation-direction: alternate; }</pre>
+        </div>
+
+        <!-- Demo 7: Fill Mode & Delay -->
+        <div class="demo-section">
+            <h3>⏳ Delay & Fill Mode</h3>
+            <p>Delay + hold state after animation.</p>
+            <div class="demo-container">
+                <div class="demo-element fill-forwards duration-demo" style="animation-delay: 0.5s; animation-iteration-count: infinite;">Forwards</div>
+                <div class="demo-element fill-backwards" style="animation: slideIn 2s backwards; animation-iteration-count: infinite;">Backwards</div>
+            </div>
+            <pre class="demo-code">.duration-demo { animation: slideIn 3s infinite; animation-delay: 0.5s; }
+.fill-forwards { animation-fill-mode: forwards; }</pre>
+        </div>
+
+        <!-- Demo 8: Color Shift Complex -->
+        <div class="demo-section">
+            <h3>🌈 Complex Multi-Property Keyframes</h3>
+            <p>Combining color, position, multiple steps.</p>
+            <div class="demo-container">
+                <div class="demo-element colorshift-demo" style="animation-duration: 4s;">Colors</div>
+            </div>
+            <pre class="demo-code">@keyframes colorShift { /* see CSS for details */ }
+.colorshift-demo { animation: colorShift 4s infinite; }</pre>
+        </div>
+
+        <!-- Demo 9: Fade -->
+        <div class="demo-section">
+            <h3>👻 Fade In/Out</h3>
+            <p>Opacity animation.</p>
+            <div class="demo-container">
+                <div class="demo-element fade-demo" style="background: #667eea;">Fade</div>
+            </div>
+            <pre class="demo-code">@keyframes fade {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+.fade-demo { animation: fade 3s infinite; }</pre>
+        </div>
+    </div>
+
+</body>
+</html>
