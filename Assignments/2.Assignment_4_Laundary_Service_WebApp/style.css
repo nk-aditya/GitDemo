@@ -13,7 +13,12 @@
     --light-grey: #6b6b6b;
     --dark-grey: #333333;
     --text-white: #ffffff;
+    --off-white: #eee;
     --transition: 0.3s ease;
+}
+
+html,body{
+    font-family: 'Arial', sans-serif ;
 }
 
 /* ======================= Main Section ========================== */
@@ -190,4 +195,96 @@
     font-family: 'Arial', sans-serif ;
     font-size: 1.4rem;
     color: var(--text-white);
+}
+
+/* ======================= Achievement Section ========================== */
+.service-section{
+    
+    height: 100vh;
+    width: 100%;
+    background-color: var(--off-white);
+    padding: 80px 120px;
+    display: flex;
+    gap: 30px;
+}
+
+.right{
+    width: 55%;
+    background-color: var(--text-white);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+
+.right .heading h2{
+    font-size: 3.2rem;
+    margin-bottom: 12px;
+}
+
+.right .heading p{
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+}
+
+.right .heading::after{
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #ddd;
+    content: " ";
+    margin: 0px auto 33px ;
+}
+
+.item{
+    display: flex;
+    justify-content: space-between;
+    height: 3.8rem;
+}
+
+.title{
+    display: flex;
+    gap: 20px;
+}
+
+.title img{
+    height: 23px;
+}
+
+.title h5{
+    font-size: 1.2rem;
+}
+
+.title h4{
+    color: #aaa;
+}
+.title .price{
+    color: var(--primary-blue);
+}
+
+.item button{
+    font-size: 1rem;
+    height: 1.6rem;
+    width: 6rem;
+    background-color:var(--primary-blue);
+    border: none;
+    border-radius: 15px;
+    color: var(--text-white);
+}
+
+.item button:hover{
+    cursor: pointer;
+    box-shadow:  0 0 10px var(--primary-yellow);
+}
+
+.items-section::after{
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #ddd;
+    content: " ";
+    margin: 0px auto 28px ;
+}
+
+.info h3{
+    font-size: 1.1rem;
 }
