@@ -208,7 +208,7 @@ html,body{
     gap: 20px;
 }
 
-.right{
+.service-section .right{
     width: 60%;
     background-color: var(--text-white);
     border-radius: 20px;
@@ -479,4 +479,147 @@ html,body{
     text-align: center;
     font-size: 1rem;
     margin-top: 5px;
+}
+
+/* ======================= Newsletter Section ========================== */
+.newsletter-section{
+    width: 100%;
+    height: 30%;
+    background-color: var(--primary-blue);
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    padding: 10px 60px;
+}
+
+.newsletter-section .right{
+    width: 40%;
+}
+.newsletter-section .right h1{
+    font-size: 3.5rem;
+    color: var(--text-white);
+    text-align: left;
+}
+
+.newsletter-section .left{
+    width: 60%;
+    display: flex;
+    gap: 20px;
+}
+
+.input-boxes{
+    display: flex;
+    gap: 20px;
+}
+
+.input-boxes input,
+.input-boxes input:focus{
+    height: 4rem;
+    width: 26rem;
+    padding: 0px 10px;
+    background-color: #57a5ffc8;
+    outline: none;
+    border: 1px solid var(--primary-yellow);
+    font-size: 1.4rem;
+    color: var(--primary-yellow);
+    caret-color: var(--primary-yellow);
+}
+
+.input-boxes input::placeholder{
+    color: var(--primary-yellow);
+}
+
+.newsletter-section .left button{
+    height: 4rem;
+    width: 100%;
+    padding: 0px 10px;
+    background-color: var(--primary-yellow);
+    outline: none;
+    border: 1px solid #dcdcdc6c;
+    font-size: 1.4rem;   
+    color: var(--light-grey);
+}
+
+.newsletter-section .left button:hover{
+    box-shadow: 0 0 10px var(--primary-yellow);
+    cursor: pointer;
+}
+
+/* ======================= Footer Section ========================== */
+footer{
+    height: 40%;
+    width: 100%;
+    background-color: #ddd;
+    display: flex;
+    gap: 80px;
+    padding: 40px 140px;
+}
+
+.footer-logo{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-logo h2{
+    font-size: 2.4rem;
+}
+
+.about-us{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.about-us h4{
+    font-size: 1.4rem;
+}
+
+.about-us p{
+    font-size: 1.2rem;
+}
+
+.footer-link{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-link h3{
+    font-size: 1.5rem;
+}
+
+.footer-link ul{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.footer-link ul{
+    list-style: none;
+}
+
+.footer-link a{
+    font-size: 1.1rem;
+    text-decoration: none;
+    color: #525252;
+}
+
+.footer-link a:hover{
+    color: #000;
+}
+
+.follow-us ul{
+    flex-direction: row;
+    gap: 20px;
+}
+
+.follow-us li{
+    font-size: 1.5rem;
+    color: #525252;
+}
+
+.follow-us li:hover{
+    color: #000;
+    cursor: pointer;
 }
