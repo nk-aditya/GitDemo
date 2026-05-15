@@ -406,16 +406,24 @@ html,body{
     gap: 30px;
 }
 
+.name-input input:hover,
+.detail-input input:hover{
+    border: 1px solid var(--primary-blue);
+   
+}
+
+.name-input input:focus,
+.detail-input input:focus{
+    outline: none;
+    border: 1px solid var(--primary-blue);
+    box-shadow: 0 0 10px rgba(35, 138, 255, 0.539);
+}
+
 /* Chrome, Safari, Edge, Opera */
 .detail-input input[type=number]::-webkit-outer-spin-button,
 .detail-input input[type=number]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
-}
-
-/* Firefox */
-.detail-input input[type=number] {
-    -moz-appearance: textfield;
 }
 
 .form button{
