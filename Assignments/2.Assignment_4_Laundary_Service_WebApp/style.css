@@ -205,11 +205,11 @@ html,body{
     background-color: var(--off-white);
     padding: 80px 120px;
     display: flex;
-    gap: 30px;
+    gap: 20px;
 }
 
 .right{
-    width: 55%;
+    width: 60%;
     background-color: var(--text-white);
     border-radius: 20px;
     padding: 30px;
@@ -287,4 +287,39 @@ html,body{
 
 .info h3{
     font-size: 1.1rem;
+}
+
+.left{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.bill-card{
+    height: 48.1%;
+    border-radius: 20px;
+    background-color: var(--text-white);
+    padding: 20px 0px;
+    margin-bottom: 20px;
+}
+
+.bill-card .heading{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+.bill-heading{
+    display: grid;
+    
+    background-color: #aaa;
+    padding: 10px 20px;
+}
+
+.booking{
+    height: 48.1%;
+    border-radius: 20px;
+    background-color: var(--text-white);
+    padding: 20px;
 }
