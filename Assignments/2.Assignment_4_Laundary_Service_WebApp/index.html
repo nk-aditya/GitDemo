@@ -10,17 +10,17 @@
 </head>
 <body>
     <!-- Main Section -->
-    <section class="main">
+    <section class="main" id="main">
         <div class="navbar">
             <div class="logo">
                 <h3>Laundary Wallah</h3>
                 <img src="assets/logo.png" alt="logo">
             </div>
             <div class="navlink">
-                <a href="#">Home</a>
-                <a href="#">Services</a>
-                <a href="#">About Us</a>
-                <a href="#">Contact Us</a>
+                <a href="#main">Home</a>
+                <a href="#service">Services</a>
+                <a href="#features">Features</a>
+                <a href="#contact">Newsletter</a>
             </div>
             <div class="username">
                 <h5>Aditya Nayak</h5>
@@ -63,7 +63,7 @@
     </section>
 
     <!-- Service Section -->
-     <section class="service-section">
+     <section class="service-section" id="service">
         <div class="right">
 
             <div class="heading">
@@ -75,56 +75,56 @@
                 <div class="item">
                     <div class="title">
                         <img src="assets/clothes.png" alt="folded clothes">
-                        <h5>Wash & Fold</h5>
+                        <h5 class="service-name">Wash & Fold</h5>
                         <h4>&#8226;</h4>
                         <h5 class="price">&#8377;149.00</h5>
                     </div>
-                    <button>Add </button>
+                    <button class="add-btn">Add </button>
                 </div>
                 <div class="item">
                     <div class="title">
                         <img src="assets/t-shirt.png" alt="t-shirt">
-                        <h5>Dry Cleaning</h5>
+                        <h5 class="service-name">Dry Cleaning</h5>
                         <h4>&#8226;</h4>
                         <h5 class="price">&#8377;299.00</h5>
                     </div>
-                    <button>Add</button>
+                    <button class="add-btn">Add</button>
                 </div>
                 <div class="item">
                     <div class="title">
                         <img src="assets/steam-iron.png" alt="steam iron">
-                        <h5>Steam Ironing</h5>
+                        <h5 class="service-name">Steam Ironing</h5>
                         <h4>&#8226;</h4>
                         <h5 class="price">&#8377;99.00</h5>
                     </div>
-                    <button>Add</button>
+                    <button class="add-btn">Add</button>
                 </div>
                 <div class="item">
                     <div class="title">
                         <img src="assets/dry-cleaning.png" alt="premium suit">
-                        <h5>Premium Laundry</h5>
+                        <h5 class="service-name">Premium Laundry</h5>
                         <h4>&#8226;</h4>
                         <h5 class="price">&#8377;399.00</h5>
                     </div>
-                    <button>Add</button>
+                    <button class="add-btn">Add</button>
                 </div>
                 <div class="item">
                     <div class="title">
                         <img src="assets/cleaning.png" alt="shoes">
-                        <h5>Shoe Cleaning</h5>
+                        <h5 class="service-name">Shoe Cleaning</h5>
                         <h4>&#8226;</h4>
                         <h5 class="price">&#8377;249.00</h5>
                     </div>
-                    <button>Add</button>
+                    <button class="add-btn">Add</button>
                 </div>
                 <div class="item">
                     <div class="title">
                         <img src="assets/pillow.png" alt="blanket">
-                        <h5>Blanket Cleaning</h5>
+                        <h5 class="service-name">Blanket Cleaning</h5>
                         <h4>&#8226;</h4>
                         <h5 class="price">&#8377;349.00</h5>
                     </div>
-                    <button>Add</button>
+                    <button class="add-btn">Add</button>
                 </div>
             </div>
             <div class="info">
@@ -143,7 +143,7 @@
                     <p>Price</p>
                 </div>
 
-                <div class="price-list">
+                <div class="price-list" id="cart-items">
                     <p>&#9432;</p>
                     <p>No Services Selected</p>
                     <p>Choose services from the list to begin your booking.</p>
@@ -151,7 +151,7 @@
 
                 <div class="total-amount">
                     <h5>Estimated Total</h5>
-                    <h5>0</h5>
+                    <h5 id="total-price">0</h5>
                 </div>
             </div>
 
@@ -186,7 +186,7 @@
     <!-- About Section -->
      <section class="about-section">
         <!-- Feature section -->
-        <div class="feature-section">
+        <div class="feature-section" id="features">
             <div class="feature-card">
                 <h1><ion-icon name="diamond-outline"></ion-icon></h1>
                 <h3>Premium Cleaning</h3>
@@ -210,7 +210,7 @@
         </div>
 
         <!-- Newsletter Section -->
-         <div class="newsletter-section">
+         <div class="newsletter-section" id="contact">
             <div class="right">
                 <h1>Stay Fresh With<br>LaundryWallah.</h1>
             </div>
@@ -224,42 +224,49 @@
          </div>
         <!-- Footer Section -->
          <footer>
-            <div class="footer-logo">
-                <h2>Laundary Wallah</h2>
-                <div class="about-us">
-                    <h4>About Us</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, illo!</p>
+            <div class="upper">
+                <div class="footer-logo">
+                    <h2>Laundary Wallah</h2>
+                    <div class="about-us">
+                        <h4>Fresh Clothes, Delivered Fast</h4>
+                        <p>Professional laundry and dry-cleaning services with quick pickup, expert care, and doorstep delivery you can trust.</p>
+                    </div>
+                </div>
+                <div class="footer-link">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#main">Home</a></li>
+                        <li><a href="#service">Services</a></li>
+                        <li><a href="#service">Prices</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-link">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><a href="#">support@laundrywallah.com</a></li>
+                        <li><a href="#">+91 98765 43210</a></li>
+                        <li><a href="#">Roorkee, Uttarakhand</a></li>
+                    </ul>
+                </div>
+                <div class="footer-link follow-us">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><ion-icon name="logo-instagram"></ion-icon></li>
+                        <li><ion-icon name="logo-facebook"></ion-icon></li>
+                        <li><ion-icon name="logo-twitter"></ion-icon></li>
+                        <li><ion-icon name="logo-youtube"></ion-icon></li>
+                    </ul>
                 </div>
             </div>
-            <div class="footer-link">
-                <h3>Important Links</h3>
-                <ul>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">About Us</a></li>
-                    <li><a href="">About Us</a></li>
-                </ul>
-            </div>
-            <div class="footer-link">
-                <h3>Contact</h3>
-                <ul>
-                    <li><a href="">mail@gmail.com</a></li>
-                    <li><a href="">mail@gmail.com</a></li>
-                </ul>
-            </div>
-            <div class="footer-link follow-us">
-                <h3>Follow Us</h3>
-                <ul>
-                    <li><ion-icon name="logo-instagram"></ion-icon></li>
-                    <li><ion-icon name="logo-facebook"></ion-icon></li>
-                    <li><ion-icon name="logo-twitter"></ion-icon></li>
-                    <li><ion-icon name="logo-youtube"></ion-icon></li>
-                </ul>
+            <div class="copyright">
+                <p>© 2026 Laundry Wallah. All rights reserved.</p>
             </div>
          </footer>
      </section>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
