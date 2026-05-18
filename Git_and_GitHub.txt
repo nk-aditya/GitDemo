@@ -29,4 +29,4 @@ Switch Branch
  >>git checkout "Branchnamewhichtoswitch"
 
 Git Clone Command
- >>git clone repourl
+ >>git clone repo-url
